@@ -4,9 +4,6 @@ Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr 
 
 ## Stundenlog:
 
-### Notiz:
-Stundenlog sollte beschreiben, was du in einer Stunde Arbeit an dem Projekt erreicht hast
-
 
 ## Projektseite:
 
