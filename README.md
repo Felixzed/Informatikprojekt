@@ -1,5 +1,5 @@
 # Informatikprojekt
-Repository zu dem Informatikprojekt im ersten Halbjahr der zwölften Klasse.
+Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr der zwölften Klasse.
 
 
 ## Stundenlog:
