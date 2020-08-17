@@ -7,7 +7,7 @@ Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr 
 
 ### [Projektseite](https://github.com/Felixzed/Informatikprojekt/blob/master/Projektseite.md) 
 
-### [Trello](https://trello.com/b/FDvxKhjR/informatikprojekt-2020)
+### [Projekt-Trello](https://trello.com/b/FDvxKhjR/informatikprojekt-2020)
 
 ### Notiz:
 Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Prozess des programmierens hinweisen, nur funktionsweise erklären.
