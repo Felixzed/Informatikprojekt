@@ -7,7 +7,7 @@ Trello: https://trello.com/b/FDvxKhjR/informatikprojekt-2020
 ## Stundenlog:
 
 
-## Projektseite:
+[## Projektseite](https://github.com/Felixzed/Informatikprojekt/blob/master/Projektseite.md) 
 
 ### Notiz:
 Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Prozess des programmierens hinweisen, nur funktionsweise erklären.
