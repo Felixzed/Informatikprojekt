@@ -3,6 +3,7 @@ Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr 
 
 Trello: https://trello.com/b/FDvxKhjR/informatikprojekt-2020
 
+# Projektwichtige Links:
 
 ## [Stundenbericht](https://github.com/Felixzed/Informatikprojekt/blob/master/Stundenbericht.md)
 
