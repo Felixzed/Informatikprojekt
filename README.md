@@ -1,7 +1,7 @@
 # Informatikprojekt
 Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr der zwölften Klasse.
 
-## Projektwichtige Links:
+## **Projektwichtige Links:**
 
 ### [Stundenbericht](https://github.com/Felixzed/Informatikprojekt/blob/master/Stundenbericht.md)
 
