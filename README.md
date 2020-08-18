@@ -9,3 +9,4 @@ Dies hier ist das GitHub-Repository zu dem Informatikprojekt im ersten Halbjahr 
 
 ### - [Projekt-Trello](https://trello.com/b/FDvxKhjR/informatikprojekt-2020)
 
+### - [Design Doc](https://docs.google.com/document/d/1RfED8MwGAkDmg-AF9oWtLQ55LMtbvNNZ1ETjN1LYYiw/edit?usp=sharing)
