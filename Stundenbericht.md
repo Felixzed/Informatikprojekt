@@ -1,5 +1,7 @@
 # Stundenbericht Informatikprojekt
 
+[Zurück zur Hauptseite](https://github.com/Felixzed/Informatikprojekt)
+
 ### Notiz:
 Stundenlog sollte beschreiben, was man in einer Stunde (Oder auch Schulstunde) Arbeit am Projekt erreicht hast.
 
