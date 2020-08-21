@@ -20,3 +20,6 @@ Erstellung Trello: https://trello.com/b/FDvxKhjR/informatikprojekt-2020
 Weitere Arbeit an der GitHub repository.
 
 Erstellung Design Doc: https://docs.google.com/document/d/1RfED8MwGAkDmg-AF9oWtLQ55LMtbvNNZ1ETjN1LYYiw/edit
+
+## Vierte Stunde: 45 min. 
+Arbeit an potentieller Angehensweise für Munition, Schussfunktion und Explosionsmechaniken.
