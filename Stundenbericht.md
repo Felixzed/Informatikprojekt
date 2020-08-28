@@ -12,6 +12,8 @@ Einführung in Organisatorisches, keine Arbeit am Projekt.
 Arbeit an dem Projekt-Github, Arbeit an Projektwichtigen Dateien wie z.B. Stundenbericht und Readme
 
 ## Heimarbeit: 2 Stunden
+Projekt erstellt.
+Features: First-Person Character der Schießen, Springen und sich bewegen kann.
 Brainstorming an dem Minimal Viable Product (MVP)
 
 Erstellung Trello: https://trello.com/b/FDvxKhjR/informatikprojekt-2020
