@@ -23,3 +23,6 @@ Erstellung Design Doc: https://docs.google.com/document/d/1RfED8MwGAkDmg-AF9oWtL
 
 ## Vierte Stunde: 45 min. 
 Arbeit an potentieller Angehensweise für Munition, Schussfunktion und Explosionsmechaniken.
+
+## Fünfte Stunde: 45 min.
+Nachforschen von Blueprint-Programmierung, Arbeit an Organisationsprogrammen.
