@@ -26,3 +26,6 @@ Arbeit an potentieller Angehensweise für Munition, Schussfunktion und Explosion
 
 ## Fünfte Stunde: 45 min.
 Nachforschen von Blueprint-Programmierung, Arbeit an Organisationsprogrammen.
+
+## Sechste Stunde: 45 min.
+Weiteres Forschen an Blueprint.
