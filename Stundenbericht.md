@@ -38,4 +38,4 @@ Neu: Test-Map
 Neu: Ragdoll-Charactere, die korrekt von Impulsen weggestoßen werden.
 
 Besondere Schwierigkeiten:
-https://github.com/Felixzed/Informatikprojekt/blob/master/.images/UnrealEngineAddRadialImpulse.PNG
+./.images/UnrealEngineAddRadialImpulse.PNG
