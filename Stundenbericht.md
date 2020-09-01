@@ -38,4 +38,8 @@ Neu: Test-Map
 Neu: Ragdoll-Charactere, die korrekt von Impulsen weggestoßen werden.
 
 Besondere Schwierigkeiten:
+
+
 ![Addradialimpulseimage](.images/UnrealEngineAddRadialImpulse.PNG)
+
+Add Radial Impulse war hier schwieriger zu verstehen, da ich in einem Radius Objekte von dem "Origin" (Sprich; dem Aufschlagspunkt) wegbewegen wollte, die
