@@ -31,3 +31,11 @@ Nachforschen von Blueprint-Programmierung, Arbeit an Organisationsprogrammen.
 
 ## Sechste Stunde: 45 min.
 Weiteres Forschen an Blueprint.
+
+## Heimarbeit: 3 Stunden
+Neu: Granatwerfer Schussfunktionalität - Waffe Schießt explodierende Projektile, die andere PhysicsActors vom Aufschlagpunkt wegstößt.
+Neu: Test-Map
+Neu: Ragdoll-Charactere, die korrekt von Impulsen weggestoßen werden.
+
+Besondere Schwierigkeiten:
+https://github.com/Felixzed/Informatikprojekt/blob/master/.images/UnrealEngineAddRadialImpulse.PNG
