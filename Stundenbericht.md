@@ -51,16 +51,20 @@ Der ForLoop war hier perfekt, ich habe einfach jedem Objekt das Physik simuliert
 
 ### Meine Lösung sieht dann so aus:
 
-*Hier noch bild hinzufügen*
+*Hier noch ein Bild einfügen*
 
 ## Siebte Stunde: 45 min.
 Arbeit am Stundenbericht
 
-## Heimarbeit: 90 min.
+## Heimarbeit: 40 min.
 Erste Bugs wurden entdeckt!
-Ich hatte den ExecutionOrder Pin "Loop Body" des ForLoop der ausschließlich für das Add Radial Impulse gedacht war für den Rest des Programms laufen lassen.
+Ich hatte den ExecutionOrder Pin "Loop Body" des ForLoop für den Rest des Programms laufen lassen.
 Somit hatte sich das Projektil versucht x-mal zu löschen und hat x-mal sich nicht richtig löschende Explosionseffekte generiert. Sehr performance-intensiv.
-Ich habe nun einen kleines Programm in den Actor des Explosionseffektes eingesetzt, damit dieser sich nach seinem Erstellen nach 3 sekunden löscht.
+Ich habe nun einen kleines Programm in den Actor des Explosionseffektes eingesetzt, damit dieser sich nach seinem Erstellen nach 3 sekunden löscht. Dazu habe ich noch den Rest des Programmes nach dem "Completed" Pin des ForLoop laufen lassen, dahinter kam noch ein "DoOnce" Befehl, nur um sicher zu sein.
 
 
-Meine verbesserte Lösung:
+### Meine verbesserte Lösung:
+*Hier noch ein Bild einfügen*
+
+## Achte Stunde: 45 min.
+Arbeit am Stundenbericht, Arbeit an Projektseite.
