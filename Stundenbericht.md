@@ -40,6 +40,16 @@ Neu: Ragdoll-Charactere, die korrekt von Impulsen weggestoßen werden.
 Besondere Schwierigkeiten:
 
 
-![Addradialimpulseimage](.images/UnrealEngineAddRadialImpulse.PNG)
+![AddradialImpulseImage](.images/UnrealEngineAddRadialImpulse.PNG)
 
-Add Radial Impulse war hier schwieriger zu verstehen, da ich in einem Radius Objekte von dem "Origin" (Sprich; dem Aufschlagspunkt) wegbewegen wollte, die
+Add Radial Impulse war hier schwieriger zu verstehen, da ich in einem Radius PhysicsEnabled Actor von dem "Origin" (Sprich; dem Aufschlagspunkt) ausgehend wegstoßen wollte, die "Target" Node hier Definiert nicht allerdings wie vorher angenommen die 3D-Form die der Radius annimmt (z.B. Würfel, Sphere) sondern eher beschreibt es **welches** Objekt von dem Origin ausgehend in einem Radius weggestoßen werden soll. Nun musste ich einen Weg herausfinden, jedes Objekt das potentiell Weggestoßen werden konnte in diesem einen "Target" Pin anzugeben.
+
+Gelöst habe ich dies mit einem "For" loop:
+
+![ForLoopImage](.images/UnrealEngineForLoop.PNG)
+
+Der ForLoop war hier perfekt, ich habe einfach jedem Objekt das Physik simuliert einen Tag gegeben, der sich "PhysicsEnabled" nennt, nun erstellen wir eine "GetActorsWithTag" node, und lassen den ausgegebenen Array in den ForLoop laufen, welcher nun für jeden Eintrag in dem Array einmal "Loop Body" ausführt, und "Completed" ausgibt, sobald alle Elemente in dem Array verarbeitet sind.
+
+Das ganze sieht dann so aus:
+
+*Hier noch bild hinzufügen*
