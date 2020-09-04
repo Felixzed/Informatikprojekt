@@ -20,7 +20,7 @@ UnrealEngine kommt mit einem bereits integrierten Schaden-Framwork, also muss ic
 
 Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
 
-Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Radius, Minimum Damage den Minimalwert unter den Unser Schaden nicht mehr fallen kann. Origin ist der Mittelpunkt von dem Radius, Damage Inner Radius beschreibt ab welchem Punkt in einem Radius wir vollen Schaden machen, diesen lasse ich bei "0". Damage Outer Radius beschreibt, ab wann wir den minimal Schaden machen. Damage Falloff ist dann noch der Exponent, der zwischen den Werten von Minimum Damage und Base Damage anhand von der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen In den Radien stehenden Actor berechnet.
+Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Radius, Minimum Damage den Minimalwert unter den Unser Schaden nicht niedriger fallen kann. Origin ist der Mittelpunkt von dem Radius, Damage Inner Radius beschreibt ab welchem Punkt in einem Radius wir vollen Schaden machen, diesen lasse ich bei "0". Damage Outer Radius beschreibt, ab wann wir den minimalschaden machen. Damage Falloff ist dann noch der Exponent, der zwischen den Werten von Minimum Damage und Base Damage anhand von der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen In den Radien stehenden Actor berechnet.
 
 AddRadialImpulse ist die Funktion die unserem Granatwerfer erlaubt, dass er bei dem Aufschlagen PhysicsActor wegstoßen kann.
 
