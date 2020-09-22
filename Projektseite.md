@@ -43,4 +43,4 @@ Ein visuelles Beispiel:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Wir nehmen "Radius" und "Strength" als eine Konstante.
+Wir nehmen "Radius" und "Strength" als eine Konstante. Wir haben keine Absicht, die Schadenswerte in irgendeiner Art zu ändern.
