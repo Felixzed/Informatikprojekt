@@ -5,20 +5,25 @@ Notiz:
 
 Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Prozess des programmierens hinweisen, nur funktionsweise erklären.
 
+## Glossar:
+
+Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielercharakter, Wand, Kiste, Sound-Emitter, Schalter)
+
 
 ## Granaten:
 
+Generiert wird dieser Actor von dem Spielercharakter, er schießt das Objekt in die Richtung, in die die Kamera zeigt.
+
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor berührt.
+Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unseres Programmes beginnen können.
 
 ### Apply Radial Damage with Falloff
-
-Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unseres Programmes beginnen können.
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
 Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen"
-UnrealEngine kommt mit einem bereits integrierten Schaden-Framwork, also muss ich mich nur sichergehen, dass Gegner auch beschädigt werden können und auch sterben.
+UnrealEngine kommt mit einem bereits integrierten Schaden-Framwork, also muss nur definiert werden, dass Gegner auch beschädigt werden können und auch sterben.
 
 Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
 
@@ -34,3 +39,5 @@ AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Auf
 "Origin" ist der Punkt, von dem der Radius ausgeht.
 Die "Radius" und "Strength" pins sind eine Float value und beschreiben jeweils die Größe des Radius und Stärke des Impulses, außerhalb des Radiuses wirkt der Impuls nicht mehr. "Falloff" beschreibt dann nur noch ob die Funktion die die Impulsstärke berechnet exponentiell oder linear mit der Distanz vom Aufschlagspunkt abällt.
 Und "Vel Change" diktiert ob der Impuls die Masse des weggestoßenen Objektes ignorieren sollte.
+
+Wir nehmen "Radius" und "Strength" als eine Variable
