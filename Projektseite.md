@@ -42,6 +42,6 @@ Und "Vel Change" diktiert ob der Impuls die Masse des weggestoßenen Objektes ig
 
 Am besten so erklärt:
 
-![AddradialImpulseExplanationImage](.images/Erklärung Radial Impulse.png)
+![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
 Wir nehmen "Radius" und "Strength" als eine Variable
