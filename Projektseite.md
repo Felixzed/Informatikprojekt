@@ -40,4 +40,8 @@ AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Auf
 Die "Radius" und "Strength" pins sind eine Float value und beschreiben jeweils die Größe des Radius und Stärke des Impulses, außerhalb des Radiuses wirkt der Impuls nicht mehr. "Falloff" beschreibt dann nur noch ob die Funktion die die Impulsstärke berechnet exponentiell oder linear mit der Distanz vom Aufschlagspunkt abällt.
 Und "Vel Change" diktiert ob der Impuls die Masse des weggestoßenen Objektes ignorieren sollte.
 
+Am besten so erklärt:
+
+![AddradialImpulseExplanationImage](.images/Erklärung Radial Impulse.png)
+
 Wir nehmen "Radius" und "Strength" als eine Variable
