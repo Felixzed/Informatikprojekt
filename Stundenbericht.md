@@ -34,7 +34,9 @@ Weiteres Forschen an Blueprint.
 
 ## Heimarbeit: 3 Stunden
 Neu: Granatwerfer Schussfunktionalität - Waffe Schießt explodierende Projektile, die andere PhysicsActors vom Aufschlagpunkt wegstößt.
+
 Neu: Test-Map
+
 Neu: Ragdoll-Charactere, die korrekt von Impulsen weggestoßen werden.
 
 ### Besondere Schwierigkeiten:
