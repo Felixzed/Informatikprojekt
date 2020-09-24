@@ -9,7 +9,7 @@ Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Pro
 
 Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielercharakter, Wand, Kiste, Sound-Emitter, Schalter)
 
-
+Execution-Pin: Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt, diese Start-Blöcke haben nur einen Execution-Output, womit ein Script anfängt.
 ## Granaten:
 
 Generiert wird dieser Actor von dem Spielercharakter, er schießt das Objekt in die Richtung, in die die Kamera zeigt.
@@ -23,7 +23,7 @@ Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unsere
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
 Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen"
-UnrealEngine kommt mit einem bereits integrierten Schaden-Framwork, also muss nur definiert werden, dass Gegner auch beschädigt werden können und auch sterben.
+UnrealEngine kommt mit einem bereits integrierten Schaden-Framework, also muss nur definiert werden, dass Gegner auch beschädigt werden können und auch sterben.
 
 Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
 
@@ -43,14 +43,14 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag benannt. 
+Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag gekennzeichnet. 
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
-ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die Identifikationsdaten von einem Objekt auf einer Karte.
+ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Objekt auf einer Karte.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
-AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von Loop Body, der für jeden eintrag in einem Array abgefeuert wird. Der Rest des Programms folgt Completed, was ein signal schickt, sobald alle Einträge in dem Array eingespeist wurden. 
+AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weite Scriptverlauf folgt "Completed", was ein signal schickt, sobald alle Einträge in dem Array verarbeitet wurden. 
 
-"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art im Spielverlauf zu ändern.
+"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art während des Spielverlaufes zu ändern.
 
