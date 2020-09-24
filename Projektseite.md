@@ -39,8 +39,17 @@ AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Auf
 "Origin" ist der Punkt, von dem der Radius ausgeht.
 Die "Radius" und "Strength" pins sind eine Float value und beschreiben jeweils die Größe des Radius und Stärke des Impulses, außerhalb des Radiuses wirkt der Impuls nicht mehr. "Falloff" beschreibt dann ob die Funktion die die abfallende Impulsstärke berechnet exponentiell oder linear mit der Distanz vom Aufschlagspunkt abfällt. Und "Vel Change" diktiert ob der Impuls die Masse des weggestoßenen Objektes ignorieren sollte.
 
-Ein visuelles Beispiel:
+Ein (Toll gezeichnetes) visuelles Beispiel:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Wir nehmen "Radius" und "Strength" als eine Konstante. Wir haben keine Absicht, die Schadenswerte in irgendeiner Art zu ändern.
+Alle Actors die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag benannt. 
+
+Zuerst wird der Funktion zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
+
+![ForLoopImage](.images/UnrealEngineForLoop.PNG)
+
+AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von Loop Body, der für jeden eintrag in einem Array abgefeuert wird. Der Rest des Programms folgt Completed, was ein signal schickt, sobald alle Einträge in dem Array eingespeist wurden. 
+
+"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art im Spielverlauf zu ändern.
+
