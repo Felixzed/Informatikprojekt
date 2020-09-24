@@ -46,7 +46,7 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag benannt. 
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
-ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Objekt von AddRadialImpulse betroffen sein soll.
+ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die Identifikationsdaten von einem Objekt auf einer Karte.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
