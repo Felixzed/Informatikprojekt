@@ -70,3 +70,10 @@ Ich habe nun einen kleines Programm in den Actor des Explosionseffektes eingeset
 
 ## Achte Stunde: 45 min.
 Arbeit am Stundenbericht, Arbeit an Projektseite.
+
+## Neunte Stunde: 45 min.
+Kurze Arbeit am Stundenbericht (Erklärung von Characterfunktionalität), Arbeit an Projektseite.
+
+## Zehnte Stunde: 45 min.
+Kurze Arbeit am Stundenbericht (Erklärung von Granatenfunktionalität), Arbeit an Projektseite.
+
