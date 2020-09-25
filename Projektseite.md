@@ -29,8 +29,8 @@ Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, 
 
 Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Radius, Minimum Damage den Minimalwert unter den Unser Schaden nicht niedriger fallen kann. Origin ist der Mittelpunkt von dem Radius und Damage Inner Radius beschreibt ab welchem Punkt in einem Radius wir vollen Schaden machen, diesen lasse ich bei "0". Damage Outer Radius beschreibt, ab wann wir den minimalschaden machen. Damage Falloff ist dann noch die Methode, die zwischen den Werten von Minimum Damage und Base Damage anhand von der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
 
-Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll, alle Actor in dem angegebenen Radius bekommen Schaden.
-
+Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll, lediglich welche Actor nicht beschädigt werden. 
+Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind konstanten, da diese nicht vom Spielgeschehen beeinflusst werden sollen. 
 ### Add Radial Impulse
 
 AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Aufschlagen PhysicsActor wegzustoßen.
