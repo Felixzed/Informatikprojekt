@@ -9,10 +9,10 @@ Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Pro
 
 Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielercharakter, Wand, Kiste, Sound-Emitter, Schalter)
 
-Execution-Pin: Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt, diese Start-Blöcke haben nur einen Execution-Output, womit ein Script anfängt.
+Execution-Pin: Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt(On Hit, OnReceiveDamage), diese Start-Blöcke haben nur einen Execution-Output womit normalerweise das Script eines Actors ausgelöst wird.
 ## Granaten:
 
-Generiert wird dieser Actor von dem Spielercharakter, er schießt das Objekt in die Richtung, in die die Kamera zeigt.
+Generiert wird dieser Actor von dem Spielercharakter sobald er linksklick drückt, er schießt das Objekt mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
 
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor berührt.
@@ -23,11 +23,13 @@ Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unsere
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
 Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen"
-UnrealEngine kommt mit einem bereits integrierten Schaden-Framework, also muss nur definiert werden, dass Gegner auch beschädigt werden können und auch sterben.
+UnrealEngine kommt mit einem bereits integrierten Schaden-Framework, es muss nur definiert werden, dass ein Actor auch beschädigt werden kann. 
 
 Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
 
 Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Radius, Minimum Damage den Minimalwert unter den Unser Schaden nicht niedriger fallen kann. Origin ist der Mittelpunkt von dem Radius und Damage Inner Radius beschreibt ab welchem Punkt in einem Radius wir vollen Schaden machen, diesen lasse ich bei "0". Damage Outer Radius beschreibt, ab wann wir den minimalschaden machen. Damage Falloff ist dann noch die Methode, die zwischen den Werten von Minimum Damage und Base Damage anhand von der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
+
+Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll, alle Actor in dem angegebenen Radius bekommen Schaden.
 
 ### Add Radial Impulse
 
@@ -46,7 +48,7 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag gekennzeichnet. 
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
-ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Objekt auf einer Karte.
+ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
