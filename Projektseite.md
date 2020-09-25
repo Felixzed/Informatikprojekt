@@ -15,7 +15,7 @@ Execution-Pin: Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "L
 Generiert wird dieser Actor von dem Spielercharakter sobald er linksklick drückt, er schießt das Objekt mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
 
 Wir beginnen mit on EventHit
-Ein hit-event wird generiert, wenn ein Actor einen anderen Actor berührt.
+Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
 Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unseres Programmes beginnen können.
 
 ### Apply Radial Damage with Falloff
@@ -52,7 +52,7 @@ ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. 
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
-AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weite Scriptverlauf folgt "Completed", was ein signal schickt, sobald alle Einträge in dem Array verarbeitet wurden. 
+AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weite Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
 
 "Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art während des Spielverlaufes zu ändern.
 
