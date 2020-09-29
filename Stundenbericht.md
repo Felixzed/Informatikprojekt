@@ -77,3 +77,7 @@ Kurze Arbeit am Stundenbericht (Erklärung von Characterfunktionalität), Arbeit
 ## Zehnte Stunde: 45 min.
 Kurze Arbeit am Stundenbericht (Erklärung von Granatenfunktionalität), Arbeit an Projektseite.
 
+## Elfte Stunde: 45 min.
+Nachforschung.
+
+
