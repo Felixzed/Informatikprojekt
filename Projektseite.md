@@ -24,7 +24,12 @@ Hiervon gibt es noch eine sonderform, sogenannte "Construction Scripts" hier gib
 
 # Schießen, Schaden u. Nachladen erklärt.
 
-In diesem Teil des Textes konzentrieren wir uns auf die Funktionen rundum Schaden machen, Schießen und Nachladen.
+## Funktion
+Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
+Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
+Zombies lassen Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
+
+Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
 ### Granaten:
 
 Generiert wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf auslöst, in diesem fall in dem er die linke Maustaste klickt. Der Character schießt den Granaten-Actor mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
