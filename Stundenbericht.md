@@ -78,6 +78,8 @@ Kurze Arbeit am Stundenbericht (Erklärung von Characterfunktionalität), Arbeit
 Kurze Arbeit am Stundenbericht (Erklärung von Granatenfunktionalität), Arbeit an Projektseite.
 
 ## Elfte Stunde: 45 min.
-Nachforschung.
+Nachforschung rund um Schadenssysteme, Nachforschung zur KI-Implementierung, Nachforschung zu Projektilverhalten.
 
+## Zwölfte Stunde: 45 min.
+Arbeit an der Projektseite: Einführung und Glossar verbessert.
 
