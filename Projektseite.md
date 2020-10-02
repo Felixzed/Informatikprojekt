@@ -5,10 +5,17 @@ Notiz:
 
 Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Prozess des programmierens hinweisen, nur funktionsweise erklären.
 
+# Einführung:
+
+Hallo! Hier finden sie meine erklärung der Funktionsweisen meines Spiels, zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt, dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
+
+Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig erfahrung in 3D-Modellierung, welches selbst mit Erfahrung sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden sie am untersten Ende dieses Textes.
+
 ## Glossar:
 
 Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielercharakter, Wand, Kiste, Sound-Emitter, Schalter)
 
+Pin: Ein In- und Output für Daten, z.B. ein Vektor, Array oder eine Objektreferenz.
 ## Einführung Ausführungsreihenfolge:
 
 Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt (OnHit, OnReceiveDamage), diese Start-Blöcke haben nur einen Execution-Output womit normalerweise das Script eines Actors ausgelöst wird. Events können auch selber erstellt werden, allerdings wird diese Funktionalität in dem Spiel nicht verwendet.
