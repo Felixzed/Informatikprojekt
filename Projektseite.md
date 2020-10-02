@@ -17,10 +17,10 @@ Hiervon gibt es noch eine sonderform, sogenannte "Construction Scripts" hier gib
 
 # Schießen, Schaden u. Nachladen erklärt.
 
-In diesem Teil des Textes konzentrieren wir uns auf die Funktionen rundum Schaden, Schießen und Nachladen.
+In diesem Teil des Textes konzentrieren wir uns auf die Funktionen rundum Schaden machen, Schießen und Nachladen.
 ### Granaten:
 
-Generiert wird dieser Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf auslöst, in diesem fall in dem er die linke Maustaste klickt. Der Character schießt den Granaten-Actor mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
+Generiert wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf auslöst, in diesem fall in dem er die linke Maustaste klickt. Der Character schießt den Granaten-Actor mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
 
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
