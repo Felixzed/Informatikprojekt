@@ -9,13 +9,15 @@ Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Pro
 
 Hallo! Hier finden sie meine erklärung der Funktionsweisen meines Spiels, zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt, dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
 
-Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig erfahrung in 3D-Modellierung, welches selbst mit Erfahrung sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden sie am untersten Ende dieses Textes.
+Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, welches bei selbst den besten sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden sie am untersten Ende dieses Textes.
 
 ## Glossar:
 
 Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielercharakter, Wand, Kiste, Sound-Emitter, Schalter)
 
-Pin: Ein In- und Output für Daten, z.B. ein Vektor, Array oder eine Objektreferenz.
+Pin: Ein In- und Output für Daten bei dem Programmieren mit Blueprints, z.B. ein Vektor, Array oder eine Objektreferenz.
+
+Mesh: Das 3D-Form eines Actors ohne Textur. Z.B. ein Mensch, ein Stuhl, ein Tisch, eine Flasche oder eine Wand.
 ## Einführung Ausführungsreihenfolge:
 
 Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt (OnHit, OnReceiveDamage), diese Start-Blöcke haben nur einen Execution-Output womit normalerweise das Script eines Actors ausgelöst wird. Events können auch selber erstellt werden, allerdings wird diese Funktionalität in dem Spiel nicht verwendet.
@@ -30,7 +32,7 @@ Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem d
 Zombies lassen Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
 
 Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
-### Granaten:
+## Granaten:
 
 Generiert wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf auslöst, in diesem fall in dem er die linke Maustaste klickt. Der Character schießt den Granaten-Actor mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
 
@@ -75,4 +77,16 @@ ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. 
 AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weite Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
 
 "Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art während des Spielverlaufes zu ändern.
+
+# Zombies, Schaden und KI.
+
+### Schaden nehmen
+Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
+MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel
+Da der Spieler in dem Spiel nur RadialDamage austeilen kann, beginnen wir unser Script mit einem Event On Take Radial Damage.
+
+
+### Ragdolling
+
+Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe da sie ähnlich wie eine Puppe zusammensacken oder weggeschmissen werden.)
 
