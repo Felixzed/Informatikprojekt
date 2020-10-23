@@ -83,7 +83,7 @@ AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", de
 ### Schaden nehmen
 Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
 MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel
-Da der Spieler in dem Spiel nur RadialDamage austeilen kann, beginnen wir unser Script mit einem Event On Take Radial Damage.
+Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen wir unser Script mit einem Event On Take Radial Damage.
 
 
 ### Ragdolling
