@@ -24,11 +24,13 @@ Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf, jede Funktion w
 
 Hiervon gibt es noch eine sonderform, sogenannte "Construction Scripts" hier gibt es einen Start-Block der sich "OnConstruction" nennt, construction scripts führen sich aus sobald ein Objekt in einem level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst) diese sind nützlich um z.B. Actor anzugeben, die sich selbst nach einer gewissen Zeit wieder löschen sollen.
 
+Oft werden zwecks übersichtlichkeit des Scripts teile des Programms in "Functions" aufgeteilt. Praktisch ist an diesen "Functions" (Von hier an "Funktionen" genannt) dass diese bei der Ausführung ein Event generieren. Wenn ich eine Funktion namens "ShootProjectile" habe, gibt es dazu direkt eine Funktion die "On Shoot Projectile" heißt.
+
 # Schießen, Schaden u. Nachladen erklärt.
 
 ## Funktion
 Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
-Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
+Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
 Zombies lassen Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
 
 Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
@@ -80,13 +82,15 @@ AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", de
 
 # Zombies, Schaden und KI.
 
-### Schaden nehmen
+
+## Schaden nehmen
+Dieses ganze Script ist in eine Funktion gefasst namens "ZombieDamageHandler"
 Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
 MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel
-Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen wir unser Script mit einem Event On Take Radial Damage.
+Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen tut die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 
 
 ### Ragdolling
 
-Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe da sie ähnlich wie eine Puppe zusammensacken oder weggeschmissen werden.)
+Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
 
