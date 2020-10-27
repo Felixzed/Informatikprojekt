@@ -93,4 +93,4 @@ Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen tut die F
 ### Ragdolling
 
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
-
+Dies geschieht ähnlichwie bei normalen PhysicsActors in dem die Zombie meshes sobald sie sterben mit dem Tag "PhysicsEnabled" versehen werden und in die Physiksimulation aufgenommen werden. 5 Sekunden später werden sie dann gelöscht um speicher zu sparen.
