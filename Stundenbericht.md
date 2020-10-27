@@ -91,3 +91,13 @@ Neu: Monster, die den Spieler angreifen und als Ragdoll umfallen, sobald sie 100
 
 Schwierig war hier die Physik für die Ragdolls zum funktionieren zu bringen, ich musste der Mesh des Charakters den Tag "PhysicsEnabled" zuweisen, damit diese von der Explosion der Granaten weggeschoben wird, hierfür musste ich einen Array von Strings des Actors aufrufen und zu diesem einen weiteren Entry mit PhysicsEnabled geben, danach wird der Array abgespeichert und der Ragdoll funktioniert!
 Schadensfunktionalität hatte ich sowieso bereits in die Granaten eingebaut, also gab es da keine Probleme. Ich habe dann zwei Variablen erstellt, einmal "MaxHealth" und "CurrentHealth" und mit jedem Schadens-Event wurde CurrentHealth mit dem Schadenswert abgezogen.
+
+## Heimarbeit: 5 Stunden
+
+Weitere Arbeit an Grundmechaniken des Spiels
+Neu: Nachlade-Funktionalität für Waffe
+Neu: Hintergrundgeräusche
+Neu: Zombie-KI und Schaden
+Neu: Spieler-HUD
+Neu: Animations-framework für Zombies
+
