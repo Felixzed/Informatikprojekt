@@ -89,8 +89,14 @@ Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" 
 MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel
 Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen tut die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 
+CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
+ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth größer/gleich 0 ist. Wenn CurrentHealth > 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth <= 0 ist, dann geschieht der "Ragdolling" Prozess.
 
 ### Ragdolling
-
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
-Dies geschieht ähnlichwie bei normalen PhysicsActors in dem die Zombie meshes sobald sie sterben mit dem Tag "PhysicsEnabled" versehen werden und in die Physiksimulation aufgenommen werden. 5 Sekunden später werden sie dann gelöscht um speicher zu sparen.
+Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden, sobald ihr übergeordneter actor unter 100 Health fällt, mit dem Tag "PhysicsEnabled" versehen. Die Physiksimulation wird dann für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert, beide werden dann 5 Sekunden später gelöscht wird um speicher zu sparen.
+
+## Zombie KI
+Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, OnTick bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Zombieangriffe verwendet.
+
+## Zombie-Nahkampfangriffe
