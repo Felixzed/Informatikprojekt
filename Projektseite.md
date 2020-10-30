@@ -31,7 +31,7 @@ Oft werden zwecks übersichtlichkeit des Scripts teile des Programms in "Functio
 ## Funktion
 Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
 Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
-Zombies lassen Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
+Zombies lassen mit einer Chance Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
 
 Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
 ## Granaten:
@@ -82,15 +82,19 @@ AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", de
 
 # Zombies, Schaden und KI.
 
+## Funktionen
+Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen anzugreifen. Sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben werden sie zu ragdolls und später dann gelöscht.
 
 ## Schaden nehmen
-Dieses ganze Script ist in eine Funktion gefasst namens "ZombieDamageHandler"
-Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
-MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel
-Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnen tut die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
+Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
 
+Diese ganze Funktion ist in eine Unterfunktion gefasst namens "ZombieDamageHandler"
+Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
+MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
+
+Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
-ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth größer/gleich 0 ist. Wenn CurrentHealth > 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth <= 0 ist, dann geschieht der "Ragdolling" Prozess.
+ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth > 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth <= 0 ist, dann geschieht der "Ragdolling" Prozess.
 
 ### Ragdolling
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
@@ -100,4 +104,7 @@ Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden
 Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, OnTick bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität verwendet.
 
 ## Zombie-Nahkampfangriffe
-Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird ein Timer gestartet. Dieser Timer ist das  
+Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Radius befand.
+
+## Wellen-Spawning
+In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl gespeichert und Bearbeitet.
