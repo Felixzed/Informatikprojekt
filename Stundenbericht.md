@@ -85,9 +85,9 @@ Arbeit an der Projektseite: Einführung und Glossar verbessert.
 
 ## Heimarbeit: 2 Stunden
 
-Neu: Health-System mit Schaden
+Neu: Health-System für Zombies
 
-Neu: Monster, die den Spieler angreifen und als Ragdoll umfallen, sobald sie 100 Punkte Schaden nehmen.
+Neu: Zombie-NPC, die den Spieler angreifen und als Ragdoll umfallen, sobald sie 100 Punkte Schaden nehmen.
 
 Schwierig war hier die Physik für die Ragdolls zum funktionieren zu bringen, ich musste der Mesh des Charakters den Tag "PhysicsEnabled" zuweisen, damit diese von der Explosion der Granaten weggeschoben wird, hierfür musste ich einen Array von Strings des Actors aufrufen und zu diesem einen weiteren Entry mit PhysicsEnabled geben, danach wird der Array abgespeichert und der Ragdoll funktioniert!
 Schadensfunktionalität hatte ich sowieso bereits in die Granaten eingebaut, also gab es da keine Probleme. Ich habe dann zwei Variablen erstellt, einmal "MaxHealth" und "CurrentHealth" und mit jedem Schadens-Event wurde CurrentHealth mit dem Schadenswert abgezogen.
@@ -95,9 +95,23 @@ Schadensfunktionalität hatte ich sowieso bereits in die Granaten eingebaut, als
 ## Heimarbeit: 5 Stunden
 
 Weitere Arbeit an Grundmechaniken des Spiels
+
 Neu: Nachlade-Funktionalität für Waffe
+
 Neu: Hintergrundgeräusche
+
 Neu: Zombie-KI und Schaden
+
 Neu: Spieler-HUD
+
 Neu: Animations-framework für Zombies
 
+Neu: Zombie-Zufallsspawnen
+
+
+Schwierigkeiten kamen hier u.a. auf bei dem Animations-Framework, ich wusste nicht genau wie ich einer Mesh, also dem Modell des Zombies, die animationen zuweisen sollte. Später lernte ich dann über eine Funktion der Unreal Engine genannt "Animation Blends". Diese Blends können anhand von einer Float-Variable flüssige Übergänge zwischen Animationen bilden, diese verwende ich z.B. um einen Übergang von Stehen zum Laufen bei den Zombies. Auch habe ich über sogenannte "Behaviour trees" gelernt, die es mir erlauben einen flüssigen Übergang anhand einer Boolean zwischen meiner Lauf/Steh-Blend und meiner Angriffsanimation zu erstellen.
+
+Auch das Spawnen war schwierig, ursprünglich hatte ich mit einem WhileLoop gearbeitet der, sobald die zu spawnende Menge zombies gespawnt war, aufhört. Dies hatte ich dann mit einem ForLoop der bei 0 anfing und abhängig von der Anzahl der Zombies der diese welle gespawnt werden sollte war. Eigenartig war das verhalten, dass wenn ich die Anzahl der Zombies für die Welle auf 10 stellte, immer 5 spawnten, wenn ich sie auf 7 stellte, spawnten immer 4. Grund hierfür, ich hatte aus versehen pro loop die Anzahl an zu spawnenden Zombies doppelt dekrementiert da ich vergessen habe diesen Teil aus der ursprünglichen WhileLoop-Implementation zu löschen. Nachdem ich dies behoben hatte standen die gespawnten Zombies allerdings einfach nur herum, sie konnten Schaden nehmen etc. aber angriffsanimationen spielen oder sich bewegen taten sie nicht. Grund hierfür war, dass ich den Actor ohne KI in die Welt platziert habe, hierfür habe ich die Funktion "SpawnActor" einfach mit "SpawnAiActor" ersetzt, daraufhin besaßen sie wieder volle Funktionalität.
+
+## 13te Stunde: 45 min.
+Arbeit erläuterung Spawnfunktionalität in sowohl Projektseite als auch Stundenbericht.
