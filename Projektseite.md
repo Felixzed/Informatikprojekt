@@ -108,3 +108,6 @@ Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wi
 
 ## Wellen-Spawning
 In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl gespeichert und Bearbeitet.
+
+### Zufällige Spawnpunkte
+Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert die eigene Lage an den Zombie-Spawnalgorithmus, dieser erstellt aus diesen einen Array
