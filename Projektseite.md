@@ -83,7 +83,7 @@ AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", de
 # Zombies, Schaden und KI.
 
 ## Funktionen
-Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen anzugreifen. Sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben werden sie zu ragdolls und später dann gelöscht.
+Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben werden sie zu ragdolls und später dann gelöscht.
 
 ## Schaden nehmen
 Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
@@ -104,10 +104,17 @@ Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden
 Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, OnTick bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität verwendet.
 
 ## Zombie-Nahkampfangriffe
-Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Radius befand.
+Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Wenn er dies nicht getan hat wird Schaden ausgeteilt. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Angriffsradius befand.
 
 ## Wellen-Spawning
 In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl gespeichert und Bearbeitet.
 
 ### Zufällige Spawnpunkte
-Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert die eigene Lage an den Zombie-Spawnalgorithmus, dieser erstellt aus diesen einen Array
+Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die Daten die die eigene Lage auf der Karte beschreiben in einen Array namens "SpawnList" welcher im Blueprint des Spielmodus gespeichert ist. Von diesem Array wird zufällig ein Eintrag ausgewählt jedes mal wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Folglich erhalten wir in Jedem Spawnzyklus zufällig gespawnte Zombies auf viele festen möglichen Spawnpunkten.
+
+
+# Animationen u. Effekte.
+
+## Animation von Spieler, Zombies. 
+Sowohl der Spieler als auch die Zombies besitzen eine sogenannte "Animation-Blueprint". Diese erlaubt es den Zombies und dem Spieler z.B. flüssige Animationsübergänge  darzustellen oder abhängig von einem bestimmten Wert die eine Animation mit einer anderen zu vermischen (sog. "Blends").
+Hierzu besitzt die Animation Blueprint von dem Zombie einer State Machine
