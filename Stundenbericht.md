@@ -115,3 +115,11 @@ Auch das Spawnen war schwierig, ursprünglich hatte ich mit einem WhileLoop gear
 
 ## 13te Stunde: 45 min.
 Arbeit erläuterung Spawnfunktionalität in sowohl Projektseite als auch Stundenbericht.
+
+## Heimarbeit: 6 Stunden.
+
+Neu: Neues Waffenmodell
+
+Neu: Granateneffekte überarbeitet
+
+Neu: Wellenmodus
