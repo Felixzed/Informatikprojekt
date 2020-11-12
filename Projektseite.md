@@ -28,15 +28,18 @@ Oft werden zwecks übersichtlichkeit des Scripts teile des Programms in "Functio
 
 # Schießen, Schaden u. Nachladen erklärt.
 
-## Funktion
+## Funktion:
 Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
 Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
-Zombies lassen mit einer Chance Munitions-Pickups fallen, wenn der Spieler dies berührt wird sein kompletter Munitionsvorrat aufgefüllt.
+Wenn ein Spieler eine Munitionskiste berührt wird seine Reservemunition vollkommen aufgefüllt.
 
 Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
-## Granaten:
 
-Generiert wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf auslöst, in diesem fall in dem er die linke Maustaste klickt. Der Character schießt den Granaten-Actor mit einer festen Geschwindigkeit in die Richtung, in die die Kamera zeigt.
+## Schießen
+
+Wenn der Spieler die linke Maustaste drückt, checkt der Spielercharakter ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist, wenn beides nicht der Fall ist dann wird das Script beendet. Wenn allerdings beides der Fall ist wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf (Fire = Linke Maustaste) auslöst mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
+
+## Granaten:
 
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
