@@ -20,4 +20,4 @@ Hier finden sie den Projekt-Trello, den ich für Organisation verwende.
 Hier geht es zum Design Document, welches die Spielideen ausführlicher erklärt.
 
 
-# Projekt soll bis Mitte November fertig sein!
+# Projekt soll bis 4. Dezember fertig sein!
