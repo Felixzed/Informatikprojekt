@@ -24,26 +24,31 @@ Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf, jede Funktion w
 
 Hiervon gibt es noch eine sonderform, sogenannte "Construction Scripts" hier gibt es einen Start-Block der sich "OnConstruction" nennt, construction scripts führen sich aus sobald ein Objekt in einem level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst) diese sind nützlich um z.B. Actor anzugeben, die sich selbst nach einer gewissen Zeit wieder löschen sollen.
 
-Oft werden zwecks übersichtlichkeit des Scripts teile des Programms in "Functions" aufgeteilt. Praktisch ist an diesen "Functions" (Von hier an "Funktionen" genannt) dass diese bei der Ausführung ein Event generieren. Wenn ich eine Funktion namens "ShootProjectile" habe, gibt es dazu direkt eine Funktion die "On Shoot Projectile" heißt.
+Oft werden zwecks übersichtlichkeit teile des Scripts in "Functions" aufgeteilt. Praktisch ist auch an diesen "Functions" (Von hier an "Funktionen" genannt) dass diese bei der Ausführung ein Event generieren. Wenn ich eine Funktion namens "ShootProjectile" habe, gibt es dazu direkt ein event das "Event ShootProjectile" heißt.
 
-# Schießen, Schaden u. Nachladen erklärt.
+# Waffen-/Spielerfunktionalität Erklärt
 
 ## Funktion:
 Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
-Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
+Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren zwecks Munitionskiste gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
 Wenn ein Spieler eine Munitionskiste berührt wird seine Reservemunition vollkommen aufgefüllt.
 
-Nun folgt eine Erklärung der wichtigen Funktionen rundum Schaden machen, Schießen und Nachladen.
+Nun folgt eine Erklärung der wichtigen Funktionen rundum Bewegen, Schießen und Nachladen.
+
+
+## Bewegung:
+
+Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveX" zugewiesen und D/A "MoveY". Dabei steht W bei MoveX für 1 und S für -1, bei MoveY steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. 
 
 ## Schießen
 
-Wenn der Spieler die linke Maustaste drückt, checkt der Spielercharakter ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist, wenn beides nicht der Fall ist dann wird das Script beendet. Wenn allerdings beides der Fall ist wird der Granaten-Actor von dem Spielercharakter (oder PlayerController) sobald er den "Fire"-Knopf (Fire = Linke Maustaste) auslöst mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
+Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
 
 ## Granaten:
 
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
-Dieses hit-event löst einen execution-pin aus, womit wir mit dem verlauf unseres Programmes beginnen können.
+Dieses hit-event löst einen execution-pin aus, womit der verlauf des Scripts beginnt.
 
 ### Apply Radial Damage with Falloff
 
@@ -72,7 +77,7 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit dem "PhysicsEnabled"-Tag gekennzeichnet. 
+Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit einem "PhysicsEnabled"-Tag gekennzeichnet. 
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
 ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
