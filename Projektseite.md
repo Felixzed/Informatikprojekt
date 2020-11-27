@@ -77,7 +77,7 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind mit einem "PhysicsEnabled"-Tag gekennzeichnet. 
+Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind manuell mit einem "PhysicsEnabled"-Tag gekennzeichnet. 
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
 ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
@@ -112,7 +112,7 @@ MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl
 
 Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
-ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth > 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth <= 0 ist, dann geschieht der "Ragdolling" Prozess.
+ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "Ragdolling" Prozess.
 
 ### Ragdolling
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
