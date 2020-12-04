@@ -132,3 +132,5 @@ Jeder Zombie hat eine Feste Chance eine Munitionskiste zu droppen. Diese Munitio
 ## Animation von Spieler, Zombies. 
 Sowohl der Spieler als auch die Zombies besitzen eine sogenannte "Animation-Blueprint". Diese erlaubt es den Zombies und dem Spieler jegliche Animationen und z.B. flüssige Animationsübergänge  darzustellen oder abhängig von einem bestimmten Wert die eine Animation mit einer anderen zu vermischen (sog. "Blends").
 Hierzu besitzt die Animation Blueprint von dem Zombie eine sog. "State Machine" die anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies berechnet. z.B. laufen/angreifen.
+
+
