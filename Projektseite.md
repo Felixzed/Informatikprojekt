@@ -38,7 +38,9 @@ Nun folgt eine Erklärung der wichtigen Funktionen rundum Bewegen, Schießen und
 
 ### Bewegung:
 
-Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveX" zugewiesen und D/A "MoveY". Dabei steht W bei MoveX für 1 und S für -1, bei MoveY steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. 
+Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. Das selbe prinzip wird für die Bewegung der Maus
+
+Bei "Jump" und 
 
 ![MoveAxisControls](.images/UnrealEngineMoveControls.PNG)
 
