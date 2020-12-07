@@ -45,6 +45,7 @@ Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen,
 ### Schießen
 
 Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
+
 ![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
 
 ## Granaten:
