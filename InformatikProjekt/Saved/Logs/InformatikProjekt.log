@@ -948,3 +948,16 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-12.00.32:266][248]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
 [2020.12.07-12.00.59:117][146]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
 [2020.12.07-12.00.59:117][146]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.07-12.09.07:473][376]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-12.09.42:376][426]BlueprintLog: New page: Compile FPPCharacter
+[2020.12.07-12.09.42:457][426]LogUObjectHash: Compacting FUObjectHashTables data took   2.08ms
+[2020.12.07-12.09.43:021][470]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacter3052D70C4CD85DAD0EF1859A9D37663F.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-12.09.43:038][470]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-12.09.43:038][470]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-12.24.11:068][921]LogSlate: Took 0.008826 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2020.12.07-12.37.10:918][567]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacterD1E11D5444B0586137A984A3F71E02BE.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-12.37.10:929][567]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-12.37.10:929][567]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-12.37.27:883][576]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacter6B4A09994802B6AF320A0D8C9C09569A.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-12.37.27:893][576]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-12.37.27:893][576]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
