@@ -3,9 +3,10 @@
 
 # Einführung:
 
-Hallo! Hier finden Sie meine Erklärung der Funktionsweisen meines Spiels. Zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt. Dieses habe ich stark bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
+Hallo! Hier finden Sie meine Erklärung der Funktionsweisen meines Spiels. Als Grundlage habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person-frameworks bereitstellt. Dieses habe ich stark bearbeitet und neue Funktionalitäten hinzugefügt, um meinen Spiel-Prototyp zu erstellen.
 
-Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, deswegen habe ich Ressourcen aus dem Internet bezogen. Eine Liste von diesen und die dazugehörigen links finden Sie am untersten Ende dieses Textes.
+Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache, die mit sogenannten "Pins" arbeitet um Informationsübertragung darzustellen. Da ich im Bereich der 3D Modellierung wenig Erfahrung gesammelt habe verwende ich frei verfügbare Modelle aus vorhandenen Modellsammlungen. Diese sind am Ende der Dokumentation aufgelistet und können durch die Links aufgerufen werden.
+Ich beanspruche die Erstellung dieser Modelle nicht als meine eigene Leistung.
 
 ## Glossar:
 
@@ -14,113 +15,117 @@ Actor: Jede Form von Objekt das ein Teil des Spielgeschehens ist. (Z.b. Spielerc
 Pin: Ein In- und Output für Daten bei dem Programmieren mit Blueprints, z.B. ein Vektor, Array oder eine Objektreferenz.
 
 Mesh: Das 3D-Form eines Actors ohne Textur. Z.B. ein Mensch, ein Stuhl, ein Tisch, eine Flasche oder eine Wand.
+
+Tick: Ein "Tick" ist ein Arbeitsschritt in der Unreal Engine. Das Event "onTick" wird bei jedem Arbeitsschritt ausgeführt.
+  
 ## Einführung Ausführungsreihenfolge:
 
-Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf, jede Funktion wie z.B. "Launch Character" in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block der verschiedene Events im Spielverlauf darstellt (OnHit, OnReceiveDamage), diese Start-Blöcke haben nur einen Execution-Output womit normalerweise das Script eines Actors ausgelöst wird. Events können auch selber erstellt werden, allerdings wird diese Funktionalität in dem Spiel nicht verwendet.
+Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf. Jede Funktion, z.B. "Launch Character", in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block, der verschiedene Events im Spielverlauf darstellt (OnHit, OnReceiveDamage). Diese Start-Blöcke haben nur einen Execution-Output, mit welchem normalerweise das Script eines Actors ausgelöst wird. Es ist möglich, eigene Events zu definierten. Im Rahmen dieses Projekts wurden neue Events erstellt.
 
-Hiervon gibt es noch eine sonderform, sogenannte "Construction Scripts" hier gibt es einen Start-Block der sich "OnConstruction" nennt, construction scripts führen sich aus sobald ein Objekt in einem level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst) diese sind nützlich um z.B. Actor anzugeben, die sich selbst nach einer gewissen Zeit wieder löschen sollen.
+Zusätzlich zu den beschriebenen Bluepriunts existiert eine Sonderform, sogenannte "Construction Scripts". Bei diesen gibt es einen Start-Block, der sich "OnConstruction" nennt. Construction scripts werden ausgeführt, sobald ein Objekt in einem level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst). Diese sind nützlich, um z.B. Actor anzugeben, die nach einer gewissen Zeit entfernt werden sollen.
 
-Oft werden zwecks übersichtlichkeit teile des Scripts in "Functions" aufgeteilt. Praktisch ist auch an diesen "Functions" (Von hier an "Funktionen" genannt) dass diese bei der Ausführung ein Event generieren. Wenn ich eine Funktion namens "ShootProjectile" habe, gibt es dazu direkt ein event das "Event ShootProjectile" heißt.
+Häufig werden für die Übersichtlichkeit Teile des Scripts in "Functions" aufgeteilt. "Functions" (Von hier an "Funktionen" genannt) generieren bei der Ausführung Events. Wenn eine Funktion mit den Namen "ShootProjectile" ausgeführt wird, gibt es dazu ein event, welches "Event ShootProjectile" heißt.
 
 # Waffen-/Spielerfunktionalität Erklärt
 
 ## Funktion:
-Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dieser kann er mit Hilfe der linken Maustaste schießen.
-Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren zwecks Munitionskiste gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
-Wenn ein Spieler eine Munitionskiste berührt wird seine Reservemunition vollkommen aufgefüllt.
+Der Spieler besitzt, um sich gegen die Zombies zu wehren, einen Granatenwerfer. Dieser kann kann mit der linken Maustaste abgeschossen werden.
+Der Granatwerfer hat eine 6-Schuss Trommel und kann durch die R-Taste nachgeladen werden. Hierfür wird eine Munitionsreserve von max. 12 Granaten zugegriffen. Wenn die Reserve verbraucht wurde kann nicht weiter nachgeladen werden. Während dem Spiel muss Munition gesammelt werden, um den Vorrat aufzufüllen. Alle wichtigen Infos zu Munition (In der Waffe geladen/im Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
+Wenn ein Spieler eine Munitionskiste berührt wird die Reservemunition vollkommen aufgefüllt.
 
 ### Bewegung:
 
-Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. Das selbe prinzip wird für die Sichtsteuerung mit der Maus angewandt.
+Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen. W/S wurde "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, welche diese Werte in Bewegungen umwandelt. Dieses Prinzip wird analog für die Sichtsteuerung mit der Maus angewandt.
 
 ![MoveAxisControls](.images/UnrealEngineMoveControls.PNG)
 
 ### Schießen
 
-Wenn der Spieler die linke Maustaste drückt, prüft das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
+Wenn der Spieler die linke Maustaste drückt prüft das Script, ob die verbleibende Munition größer als 0 ist oder ob der Boolean "IsReloading" false ist. Wenn keines des Events eintritt passiert nichts. Falls beide Events eintreten wird ein Granaten-Actor mit einer festen Geschwindigkeit in Blickrichtung der Kamera.
 
 
 ![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
 
-Wir holen uns den Forwärtsvektor der Kamera und fügen einen vorher definierten Offset hinzu, damit die Granate nicht direkt mittig aus dem Bildschirm "geschossen" wird.
+Um den Schussvektor zu definieren wird auf den Blickvektor ein Offset addiert. Somit entsteht der Eindruck, dass das Projektil nicht aus dem Zentrum des Bildschirms erscheint.
+
 ![ShootingFunctionImage](.images/UnrealEngineShootingFunction.PNG)
 
 Abspielen vom Schussound und dem Mündungsfeuereffekt.
+
 ![ShootingFlashImage](.images/UnrealEngineSoundAndFlash.PNG)
 
 ## Granaten:
 
-Wir beginnen mit on EventHit
-Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
-Dieses hit-event löst einen execution-pin aus, womit der verlauf des Scripts beginnt.
+Event: on EventHit
+Ein hit-event wird generiert, wenn zwei Actor miteinander kollidieren.
+Dieses hit-event löst einen execution-pin aus, welcher den Verlauf des Scripts beginnt.
 
 ![ShootingFlashImage](.images/UnrealEngineGrenadeHitDamageExplode.PNG)
 
-Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, darauf wird ApplyRadialDamage ausgeführt.
+Die Kollision wird zuerst deaktiviert, um keine weiteren HitEvents zu generieren. Darauf wird die ApplyRadialDamage Funktion ausgeführt.
 
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
-Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen".
+Diese Funktion ermöglicht es, in einem Radius um einen Aufschlagspunkt Objekte zu "beschädigen".
 
-UnrealEngine kommt mit einem bereits integrierten Schaden-Framework, es muss nur definiert werden, dass ein Actor auch beschädigt werden kann. 
+Die UnrealEngine besitzt in dem bereits implementierten Gameplay-Framework ein Schadensmodul. Somit kann definiert werden, dass ein Actor beschädigt werden kann. 
 
-Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
+Hierbei sind die Parameter für Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller relevant.
 
-Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Radius, Minimum Damage den Minimalwert unter den Unser Schaden nicht niedriger fallen kann. Origin ist der Mittelpunkt von dem Radius und Damage Inner Radius beschreibt ab welchem Punkt in einem Radius wir vollen Schaden machen, diesen lasse ich bei "0". Damage Outer Radius beschreibt, ab wann wir den minimalschaden machen. Damage Falloff ist dann noch die Methode, die zwischen den Werten von Minimum Damage und Base Damage anhand von der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
+Base Damage beschreibt den Grundschaden, der in einem Radius verursacht wird. Minimum Damage definiert den Minimalwert, unter den der Schadenswert nicht fallen kann. Origin ist der Mittelpunkt des Radius und Damage Inner Radius. Dies beschreibt, ab welchem Punkt in einem Radius der maximale Schaden verursacht wird. Da der Origin nicht verschoben wird ein Wert von 0 eingesetzt. Damage Outer Radius beschreibt, ab welchem Punkt Schaden verursacht wird. Damage Falloff ist die Methode, welche zwischen den Werten von Minimum Damage und Base Damage milthilfe der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
 
-Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll, lediglich welche Actor nicht beschädigt werden. 
-Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind konstanten, da diese nicht vom Spielgeschehen beeinflusst werden sollen. 
+Apply Radial Damage benötigt die Information, welcher Actor nicht beschädigt werden soll.
+Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind Konstanten. Diese Werte werden im Verlauf der Anwendung nicht verändert. 
 
-Danach platzieren wir auf dem Aufschlagspunkt einen Explosionseffekt und machen die Granate unsichtbar.
+Auf dem Aufschlagspunkt wird eine Explosionseffekt erzeugt und der Actor für die Granate unsichtbar gesetzt.
 
 
-Nun folgt diese Sequenz mit mit einem ForLoop:
+Es folgt diese Sequenz in einem ForLoop:
 
 ![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
 
-Zuerst wird AddRadialImpulse durch den ForLoop ein Array von allen Actors auf dem Level die den Tag "PhysicsEnabled" besitzen, gegeben.
-ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
+Im ersten Schritt wird AddRadialImpulse durch den For-Loop Array von allen Actors in dem Level, welche den Tag "PhysicsEnabled" besitzen, übergeben.
+Die For-Loop gibt von jedem Eintrag in einem Array die Parameter aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
-AddRadialImpulse folgt bei dem ForLoop dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
+AddRadialImpulse folgt dem Ablauf von "Loop Body", welcher für jeden Eintrag in einem Array ausgelöst wird. Der weitere Scriptverlauf folgt "Completed". "Completed" sendet ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
 
-ForLoop führt dann AddRadialImpulse
+ForLoop führt AddRadialImpulse aus.
 
-AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Aufschlagen PhysicsActor wegzustoßen.
+AddRadialImpulse ermöglicht es, mit dem Granatwerfer PhysicsActor wegzustoßen.
 
 ![AddradialImpulseImage](.images/UnrealEngineAddRadialImpulse.PNG)
 
 "Target" Beschreibt, welches Objekt den Impuls erfahren soll.
 "Origin" ist der Punkt, von dem der Radius ausgeht.
-Die "Radius" und "Strength" pins sind eine Float value und beschreiben jeweils die Größe des Radius und Stärke des Impulses. Außerhalb des Radius wirkt der Impuls nicht mehr. "Falloff" beschreibt dann ob die Funktion, die die abfallende Impulsstärke berechnet, exponentiell oder linear mit der Distanz vom Aufschlagspunkt abfällt. Und "Vel Change" diktiert, ob der Impuls die Masse des weggestoßenen Objektes ignorieren sollte.
+Die "Radius" und "Strength" pins sind float-values und beschreiben jeweils die Größe des Radius und Stärke des Impulses. Außerhalb des Radius wirkt der Impuls nicht. "Falloff" beschreibt, ob die Funktion, welche die abfallende Impulsstärke berechnet, exponentiell oder linear mit der Distanz vom Aufschlagspunkt abfällt. "Vel Change" definiert, ob der Impuls die Masse des weggestoßenen Objektes ignoriert.
 
-Ein (Toll gezeichnetes) visuelles Beispiel:
+Ein Visualisierung der beschriebenen Funktionalität:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind manuell mit einem "PhysicsEnabled"-Tag gekennzeichnet. 
+Alle Actors, die von den Physik-Interaktionen der Granaten manipuliert werden können, sind mit einem "PhysicsEnabled"-Paramter gekennzeichnet. 
 
-"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Werte in irgendeiner Art während des Spielverlaufes zu ändern.
-
+"Radius" und "Strength" sind als Konstanten definiert.
 
 # Wellen- und Spawnstruktur
 
 ## Game Mode Blueprint
-In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl sowohl als auch die Liste potentieller Spawnpunkte gespeichert und bearbeitet. Ebenfalls werden die UI-Elemente wie der Countdown zur nächsten Welle prozessiert.
+In dem "Game Mode Blueprint" werden die Wellenzahl, die Zombieanzahl und die Liste potentieller Spawnpunkte definiert und bearbeitet. Ebenfalls werden die UI-Elemente, z.B. der Countdown zur nächsten Welle, verarbeitet.
 
-Die Game Mode Blueprint kann bei jedem Level individuell ausgewählt und ausgeführt werden.
+Die Game Mode Blueprint kann für jedes Level individuell ausgewählt und ausgeführt werden.
 
-Hier eine Liste der Variablen, die in dem Game Mode Blueprint gespeichert werden:
+Hier eine Liste der Variablen, welche in dem Game Mode Blueprint gespeichert werden:
 
 ![VariableExample](.images/UnrealEngineVariableStore.PNG)
 
 
 ### Zufällige Spawnpunkte
-Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die Daten die die eigene Lage auf der Karte beschreiben in einen Array namens "SpawnList" welcher im Blueprint des Spielmodus gespeichert ist. Von diesem Array wird zufällig ein Eintrag ausgewählt jedes mal wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Folglich erhalten wir in Jedem Spawnzyklus zufällig gespawnte Zombies auf viele festen möglichen Spawnpunkten.
+Alle Actor, welche den Tag "ZombieSpawnPoint" besitzen, liefern beim Start der Anwendung die aktuelle Position in einen Array "SpawnList". Dies wird im Blueprint des Spielmodus gespeichert. Von diesem Array wird zufällig ein Eintrag ausgewählt, wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Somit werden in jedem Spawnzyklus zufällig gespawnte Zombies zu dem Level hinzugefügt.
 
-Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spiel beginnt.
+Dieses Script wird bei "EventBeginPlay" ausgeführt. Das Event wird bei jedem Starten eines Levels ausgeführt.
 
 ![VariableExample](.images/UnrealEngineBuildSpawnPointList.PNG)
 
@@ -145,37 +150,37 @@ Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen
 
 
 ## Schaden nehmen
-Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
+Zombies erleiden Umgebungsschaden, wenn eine Granate des Spielers in der Nähe explodiert.
 
 ![ZombieDamageRecieveImage](.images/UnrealEngineZombieDamageScript.PNG)
 
-Diese Funktion ist in eine Unterfunktion namens "ZombieDamageHandler" gefasst.
-Jeder Zombie hat für dieses System zwei wichtige Variablen. "MaxHealth" und "CurrentHealth".
-MaxHealth ist konstant die Zahl 100, sie definiert die Maximalanzahl an HP die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
+Diese Funktion ist in der Unterfunktion "ZombieDamageHandler" definiert.
+Jeder Zombie besitzt für dieses System zwei Variablen: "MaxHealth" und "CurrentHealth".
+MaxHealth ein konstanter Wert von 100, diese Konstante definiert die maximalen Lebenspunkte eines Zombies. CurrentHealth  speichert die aktuell verbleibenden Lebenspunkte.
 
-Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
-CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
-ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 ist dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "ZombieDeath"-Prozess.
+Der Spieler verursacht Radial Damage. Bei einem Treffer wird die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage aufgerufen.
+CurrentHealth des getroffenen Zombies wird abgerufen. Von diesem Wert wird der erlittenen Schaden subtrahiert, das Ergebnis ist der neue Wert für CurrentHealth.
+Abhängig von dem neuen Wert für CurrentHealth wird ein Boolean erzugeugt. Dieser gibt an, ob der Wert kleiner 1 ist. Wenn weniger als 1 Lebenspunkt verbleibt wird der Zombie entfernt und ein Ragdoll erzeugt.
 
 ### Ragdolling
-Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem Tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
-Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden, sobald ihr übergeordneter actor unter 100 Health fällt, mit dem Tag "PhysicsEnabled" versehen. Die Physiksimulation wird dann für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert, beide werden dann 5 Sekunden später gelöscht wird um speicher zu sparen.
+Ragdolling ist ein Feature, welches die Meshes der Zombies mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
+Diese Funktion ist den verwendeten PhysicsActors ähnlich. Die Zombie Meshes erhalten, sobald ihr übergeordneter actor unter 100 Health fällt, den Tag "PhysicsEnabled". Die Physiksimulation wird für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert. Diese werden 5 Sekunden später gelöscht, somit werden die Meshes aus dem Level entfernt.
 
 ![ZombieDamageRecieveImage](.images/UnrealEngineRagdollingProcess.PNG)
 
 ## Zombie KI
-Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, Mit einem Event welches bei jedem Tick ausgelöst wird bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität und Animation verwendet.
+Zombies besitzen als Verhaltensmuster die Aktionen Bewegen und Angreifen. OnTick bekommt jeder Zombie den Befehl, sich zu der Spielerposition zu bewegen. Um den Zombie wird ein Radius berechnet, in dem dieser sich bewegen kann. Wenn der Spieler sich in diesem Radius befindet wird ein Agriff ausgeführt. Hierfür wird ein "OnSuccess"-Pin ausgeführt. Wenn der Spieler nicht in diesem Radius steht wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird für die die Angriffsfunktionalität und Animation genutzt.
 
 ## Zombie-Nahkampfangriffe
 Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Wenn er dies nicht getan hat wird Schaden ausgeteilt. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Angriffsradius befand.
 
 ## Munition droppen
-Jeder Zombie hat eine Feste Chance eine Munitionskiste zu droppen. Diese Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft verschwindet diese und die Reservemunition des Spielers wird wieder aufgefüllt. Ausgelöst wird diese Funktion mit einem OnBeginOverlap-Event. Die Drop-Chance wird berechnet durch die auswahl einer zufälligen Integer im Bereich von 1 bis 0, es wird geprüft ob diese Zufällige Zahl kleiner/gleich die variable "AmmoCrateDropChance" (AmmoCrateDropChance normalerweise = 0.2) ist. Wenn dies der fall ist wird eine Munitionskiste auf der Position des Zombies gedroppt.
+Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen zu lassen. Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird diese entfernt und die Reservemunition des Spielers aufgefüllt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst. Die Wahrscheinlichkeit, ob eine Munitionskiste fallen gelassen wird, kann durch eine Zufallsfunktion bestimmt werden. Hierfür wird ein float-Wert zwischen 0 und 1 generiert. Wenn der genertierte Wert kleiner dem Wert der Variable "AmmoCrateDropChance" wird eine Munitionskiste erstellt.
 
 # Animationen u. Effekte.
 
 ## Animation von Spieler, Zombies. 
-Sowohl der Spieler als auch die Zombies besitzen eine sogenannte "Animation-Blueprint". Diese erlaubt es den Zombies und dem Spieler jegliche Animationen und z.B. flüssige Animationsübergänge  darzustellen oder abhängig von einem bestimmten Wert die eine Animation mit einer anderen zu vermischen (sog. "Blends").
-Hierzu besitzt die Animation Blueprint von dem Zombie eine sog. "State Machine" die anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies berechnet. z.B. laufen/angreifen.
+Sowohl der Spieler als auch die Zombies besitzen ein sogenanntes "Animation-Blueprint". Dies ermöglicht es, jegliche Animationen (z.B. flüssige Animationsübergäng) darzustellen oder abhängig von einem bestimmten Wert Animationen zu kombienieren (sogenannte "Blends").
+Hierzu besitzt die Animation Blueprint von dem Zombie eine sogenannte "State Machine". Diese berechnet anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies. Ein solcher Übergang findet z.B. zwischen der Animation für das Laufen und Angreifen statt.
 
 

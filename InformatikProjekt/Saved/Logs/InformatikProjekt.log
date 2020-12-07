@@ -1220,3 +1220,9 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-21.14.33:181][438]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie97A9079A492C12132EFC1CAAC5196126.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
 [2020.12.07-21.14.33:197][438]AssetCheck: New page: Asset Save: NPC_Zombie
 [2020.12.07-21.14.33:197][438]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-21.25.20:185][467]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie6DACD259478815455253FCB60F93B0C2.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-21.25.20:201][467]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-21.25.20:201][467]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-21.35.35:283][885]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_ZombieE1A5C0924F7AC21E804359B47B83C6E8.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-21.35.35:299][885]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-21.35.35:299][885]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
