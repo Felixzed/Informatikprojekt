@@ -48,6 +48,7 @@ Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition 
 
 ![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
 
+![ShootingFunctionImage](.images/UnrealEngineShootingFunction.PNG)
 ## Granaten:
 
 Wir beginnen mit on EventHit
