@@ -62,7 +62,7 @@ Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zus
 Dieses hit-event löst einen execution-pin aus, womit der verlauf des Scripts beginnt.
 
 ![ShootingFlashImage](.images/UnrealEngineGrenadeHitDamageExplode.PNG)
-Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, nun folgt:
+Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, darauf wird DoRadialDamage ausgeführt.
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
