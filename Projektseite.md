@@ -133,7 +133,7 @@ Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmulti
 
 ![WaveSpawnerImg2](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
 
-Der ForLoop führt den Loop Body von 1 bis ZombiesThisWave aus, hierbei wird ein zufälliger Eintrag der Spawnpunktliste ausgewählt und mit diesem Wert ein Zombie gespawnt. 
+Der ForLoop führt den Loop Body von 1 bis ZombiesThisWave aus, hierbei wird ein zufälliger Eintrag der Spawnpunktliste ausgewählt und damit ein Zombie gespawnt. 
 
 # Zombies, Schaden und KI.
 
