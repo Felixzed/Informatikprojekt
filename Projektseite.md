@@ -78,7 +78,20 @@ Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage
 
 Danach platzieren wir auf dem Aufschlagspunkt einen Explosionseffekt und machen die Granate unsichtbar.
 
-### Add Radial Impulse
+
+
+![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
+
+Nun folgt diese Sequenz mit mit einem ForLoop:
+
+Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
+ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
+
+![ForLoopImage](.images/UnrealEngineForLoop.PNG)
+
+AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
+
+ForLoop führt dann AddRadialImpulse
 
 AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Aufschlagen PhysicsActor wegzustoßen.
 
@@ -94,14 +107,7 @@ Ein (Toll gezeichnetes) visuelles Beispiel:
 
 Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, sind manuell mit einem "PhysicsEnabled"-Tag gekennzeichnet. 
 
-Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
-ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
-
-![ForLoopImage](.images/UnrealEngineForLoop.PNG)
-
-AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
-
-"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art während des Spielverlaufes zu ändern.
+"Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Werte in irgendeiner Art während des Spielverlaufes zu ändern.
 
 
 

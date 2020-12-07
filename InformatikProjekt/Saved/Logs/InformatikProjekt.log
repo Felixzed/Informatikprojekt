@@ -1122,3 +1122,33 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-15.50.41:166][192]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/GrenadeC13B04374C20F697441A15889C0F274B.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/Grenade.uasset'
 [2020.12.07-15.50.41:177][192]AssetCheck: New page: Asset Save: Grenade
 [2020.12.07-15.50.41:177][192]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
+[2020.12.07-16.13.06:076][791]BlueprintLog: New page: Compile Grenade
+[2020.12.07-16.13.06:133][791]LogUObjectHash: Compacting FUObjectHashTables data took   2.88ms
+[2020.12.07-16.13.06:635][840]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Grenade7274CA414C0E9B1B50F28BA765CB1282.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/Grenade.uasset'
+[2020.12.07-16.13.06:647][840]AssetCheck: New page: Asset Save: Grenade
+[2020.12.07-16.13.06:647][840]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
+[2020.12.07-16.14.14:763][962]BlueprintLog: New page: Compile Grenade
+[2020.12.07-16.14.14:813][962]LogUObjectHash: Compacting FUObjectHashTables data took   3.38ms
+[2020.12.07-16.14.15:274][  6]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Grenade2A9E315A4D204B06B680678881A79AD7.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/Grenade.uasset'
+[2020.12.07-16.14.15:286][  6]AssetCheck: New page: Asset Save: Grenade
+[2020.12.07-16.14.15:286][  6]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
+[2020.12.07-16.46.23:432][167]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{88be4bfe-1064-4e8e-bcd5-388075b557a3}.
+[2020.12.07-16.46.23:432][167]LogTemp: Resetting audio stream to device id 
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 1: FrontRight
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 4: BackLeft
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 5: BackRight
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 6: SideLeft
+[2020.12.07-16.46.23:450][167]LogAudioMixer: Display: 7: SideRight
+[2020.12.07-16.49.17:668][689]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{a1dcf82c-1ae2-4b4f-8ed0-dfe4a8a622ba}.
+[2020.12.07-16.49.17:668][689]LogTemp: Resetting audio stream to device id 
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 1: FrontRight
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 4: BackLeft
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 5: BackRight
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 6: SideLeft
+[2020.12.07-16.49.17:687][689]LogAudioMixer: Display: 7: SideRight
