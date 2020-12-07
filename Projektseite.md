@@ -40,12 +40,12 @@ Nun folgt eine Erklärung der wichtigen Funktionen rundum Bewegen, Schießen und
 
 Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveX" zugewiesen und D/A "MoveY". Dabei steht W bei MoveX für 1 und S für -1, bei MoveY steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. 
 
-![MoveAxisControls](.images\UnrealEngineMoveControls.PNG)
+![MoveAxisControls](.images/UnrealEngineMoveControls.PNG)
 
 ### Schießen
 
 Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
-![ShootingCheckImage](.images\UnrealEngineShootingCheck.PNG)
+![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
 
 ## Granaten:
 
