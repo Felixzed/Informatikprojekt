@@ -126,9 +126,9 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 
 ## Wellen-Spawning
 
-Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wert wird dann als Endwert in einen ForLoop geführt.
-
 ![WaveSpawnerImg1](.images/UnrealEngineSpawnPhaseCalc.PNG)
+
+Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wert wird dann als Endwert in einen ForLoop geführt.
 
 
 ![WaveSpawnerImg2](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
