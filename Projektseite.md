@@ -116,9 +116,10 @@ In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl sowoh
 
 Die Game Mode Blueprint kann bei jedem Level individuell ausgewählt und ausgeführt werden.
 
+Hier eine Liste der Variablen, die in dem Game Mode Blueprint gespeichert werden:
+
 ![VariableExample](.images/UnrealEngineVariableStore.PNG)
 
-In diesem Bild sind die verschiedenen Variablen der Game Mode Blueprint dargestellt.
 
 ### Zufällige Spawnpunkte
 Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die Daten die die eigene Lage auf der Karte beschreiben in einen Array namens "SpawnList" welcher im Blueprint des Spielmodus gespeichert ist. Von diesem Array wird zufällig ein Eintrag ausgewählt jedes mal wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Folglich erhalten wir in Jedem Spawnzyklus zufällig gespawnte Zombies auf viele festen möglichen Spawnpunkten.
