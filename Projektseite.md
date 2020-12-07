@@ -79,9 +79,9 @@ Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage
 Danach platzieren wir auf dem Aufschlagspunkt einen Explosionseffekt und machen die Granate unsichtbar.
 
 
-![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
-
 Nun folgt diese Sequenz mit mit einem ForLoop:
+
+![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
 
 Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
 ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
