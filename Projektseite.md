@@ -33,14 +33,9 @@ Unser Spieler hat um sich gegen die Zombies zu wehren einen Granatenwerfer, dies
 Der Granatwerfer hat eine 6-Schuss Trommel und muss, wenn er leer ist, mit dem drücken der "r"-Taste nachgeladen werden. Hierfür greift er auf eine Munitionsreserve von max. 12 Granaten zu. Der Spieler kann, wenn seine Reserve leer ist, nicht mehr nachladen. Er ist zum Aufmunitionieren zwecks Munitionskiste gezwungen. Alle wichtigen Infos zu Munition (In der Waffe geladen/Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
 Wenn ein Spieler eine Munitionskiste berührt wird seine Reservemunition vollkommen aufgefüllt.
 
-Nun folgt eine Erklärung der wichtigen Funktionen rundum Bewegen, Schießen und Nachladen.
-
-
 ### Bewegung:
 
-Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. Das selbe prinzip wird für die Bewegung der Maus
-
-Bei "Jump" und 
+Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen, W/S wurden "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight steht D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, die dann diese Werte in Bewegungen umwandelt. Das selbe prinzip wird für die Sichtsteuerung mit der Maus angewandt.
 
 ![MoveAxisControls](.images/UnrealEngineMoveControls.PNG)
 
@@ -64,7 +59,9 @@ Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zus
 Dieses hit-event löst einen execution-pin aus, womit der verlauf des Scripts beginnt.
 
 ![ShootingFlashImage](.images/UnrealEngineGrenadeHitDamageExplode.PNG)
-Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, darauf wird DoRadialDamage ausgeführt.
+
+Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, darauf wird ApplyRadialDamage ausgeführt.
+
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
@@ -80,7 +77,6 @@ Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll,
 Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind konstanten, da diese nicht vom Spielgeschehen beeinflusst werden sollen. 
 
 Danach platzieren wir auf dem Aufschlagspunkt einen Explosionseffekt und machen die Granate unsichtbar.
-
 
 
 ![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
