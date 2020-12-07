@@ -1156,3 +1156,28 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-18.00.09:318][439]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveModeE4571BF549D63338CF89AFAEA85DAAB2.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
 [2020.12.07-18.00.09:330][439]AssetCheck: New page: Asset Save: FPPWaveMode
 [2020.12.07-18.00.09:330][439]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-18.37.27:681][711]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode0FB7469D41B95727A562508A8856A0AB.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
+[2020.12.07-18.37.27:693][711]AssetCheck: New page: Asset Save: FPPWaveMode
+[2020.12.07-18.37.27:693][711]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-18.38.33:142][401]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-19.11.42:853][194]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{88be4bfe-1064-4e8e-bcd5-388075b557a3}.
+[2020.12.07-19.11.42:854][194]LogTemp: Resetting audio stream to device id 
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 1: FrontRight
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 4: BackLeft
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 5: BackRight
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 6: SideLeft
+[2020.12.07-19.11.42:869][194]LogAudioMixer: Display: 7: SideRight
+[2020.12.07-19.17.23:769][211]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{a1dcf82c-1ae2-4b4f-8ed0-dfe4a8a622ba}.
+[2020.12.07-19.17.23:769][211]LogTemp: Resetting audio stream to device id 
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 1: FrontRight
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 4: BackLeft
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 5: BackRight
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 6: SideLeft
+[2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 7: SideRight
+[2020.12.07-19.35.42:014][623]LogSlate: Window 'Event Graph' being destroyed

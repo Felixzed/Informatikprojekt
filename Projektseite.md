@@ -1,10 +1,6 @@
 # Projektseite
 [Zurück zur Hauptseite](https://github.com/Felixzed/Informatikprojekt)
 
-Notiz:
-
-Projektseite beschreibt die Funktionsweise des Programms, hier nicht auf den Prozess des programmierens hinweisen, nur funktionsweise erklären.
-
 # Einführung:
 
 Hallo! Hier finden sie meine erklärung der Funktionsweisen meines Spiels, zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt, dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
@@ -124,12 +120,17 @@ Hier eine Liste der Variablen, die in dem Game Mode Blueprint gespeichert werden
 ### Zufällige Spawnpunkte
 Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die Daten die die eigene Lage auf der Karte beschreiben in einen Array namens "SpawnList" welcher im Blueprint des Spielmodus gespeichert ist. Von diesem Array wird zufällig ein Eintrag ausgewählt jedes mal wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Folglich erhalten wir in Jedem Spawnzyklus zufällig gespawnte Zombies auf viele festen möglichen Spawnpunkten.
 
+Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spiel beginnt.
+
+![VariableExample](.images/UnrealEngineBuildSpawnPointList.PNG)
+
 # Zombies, Schaden und KI.
 
 ## Zombies
 
 ## Funktionen
 Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht.
+
 
 
 ## Schaden nehmen
