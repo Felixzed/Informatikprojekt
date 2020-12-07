@@ -46,16 +46,23 @@ Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen,
 
 Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
 
+
 ![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
 
+Wir holen uns den Forwärtsvektor der Kamera und fügen einen vorher definierten Offset hinzu, damit die Granate nicht direkt mittig aus dem Bildschirm "geschossen" wird.
 ![ShootingFunctionImage](.images/UnrealEngineShootingFunction.PNG)
+
+Abspielen vom Schussound und dem Mündungsfeuereffekt.
+![ShootingFlashImage](.images/UnrealEngineSoundAndFlash.PNG)
+
 ## Granaten:
 
 Wir beginnen mit on EventHit
 Ein hit-event wird generiert, wenn ein Actor einen anderen Actor, mit dem er zusammenprallen kann, berührt.
 Dieses hit-event löst einen execution-pin aus, womit der verlauf des Scripts beginnt.
 
-### Apply Radial Damage with Falloff
+![ShootingFlashImage](.images/UnrealEngineGrenadeHitDamageExplode.PNG)
+Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert werden, nun folgt:
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
@@ -68,6 +75,9 @@ Base Damage beschreibt hier den Grundschaden den wir Machen wollen in unserem Ra
 
 Apply Radial Damage braucht keine Angabe, welcher Actor beschädigt werden soll, lediglich welche Actor nicht beschädigt werden. 
 Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind konstanten, da diese nicht vom Spielgeschehen beeinflusst werden sollen. 
+
+Danach platzieren wir auf dem Aufschlagspunkt einen Explosionseffekt und machen die Granate unsichtbar.
+
 ### Add Radial Impulse
 
 AddRadialImpulse ist die Funktion, die unserem Granatwerfer erlaubt nach dem Aufschlagen PhysicsActor wegzustoßen.
@@ -92,6 +102,8 @@ ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. 
 AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
 
 "Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Schadenswerte in irgendeiner Art während des Spielverlaufes zu ändern.
+
+
 
 # Wellen- und Spawnstruktur
 

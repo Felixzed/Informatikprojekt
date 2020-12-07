@@ -1104,3 +1104,21 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-15.03.33:550][486]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacter4ED5556946ACA6C8B309C89C8F59B22D.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
 [2020.12.07-15.03.33:565][486]AssetCheck: New page: Asset Save: FPPCharacter
 [2020.12.07-15.03.33:565][486]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-15.48.59:014][708]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacterA5AEDE2044FA6CB4A43EDF8DF8FFD282.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-15.48.59:028][708]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-15.48.59:029][708]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-15.49.00:593][887]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
+[2020.12.07-15.49.32:411][267]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-15.50.27:140][115]LogUObjectHash: Compacting FUObjectHashTables data took   3.44ms
+[2020.12.07-15.50.27:141][115]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.033
+[2020.12.07-15.50.27:142][115]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Informatikprojekt/PlayerAssets/Grenade] ([1] browsable assets)...
+[2020.12.07-15.50.27:151][115]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade]
+[2020.12.07-15.50.27:151][115]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/PlayerAssets/Grenade]
+[2020.12.07-15.50.27:181][115]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Grenade_Auto24090F2574FC656C19C012F9553E98756.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/PlayerAssets/Grenade_Auto2.uasset'
+[2020.12.07-15.50.27:182][115]LogFileHelpers: Auto-saving content packages took 0.040
+[2020.12.07-15.50.40:822][156]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/GrenadeBC73BDFC4DD05C02437AA2BC007780F0.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/Grenade.uasset'
+[2020.12.07-15.50.40:835][156]AssetCheck: New page: Asset Save: Grenade
+[2020.12.07-15.50.40:835][156]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
+[2020.12.07-15.50.41:166][192]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/GrenadeC13B04374C20F697441A15889C0F274B.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/Grenade.uasset'
+[2020.12.07-15.50.41:177][192]AssetCheck: New page: Asset Save: Grenade
+[2020.12.07-15.50.41:177][192]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/Grenade.Grenade
