@@ -128,7 +128,7 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 
 Wellen
 
-![WaveSpawnerImg1](.images/SpawnPhaseCalc.PNG)
+![WaveSpawnerImg1](.images/UnrealEngineSpawnPhaseCalc.PNG)
 
 # Zombies, Schaden und KI.
 
