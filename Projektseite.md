@@ -109,11 +109,16 @@ Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, si
 "Radius" und "Strength" ist definiert als eine Konstante. Es besteht keine Absicht, die Werte in irgendeiner Art während des Spielverlaufes zu ändern.
 
 
-
 # Wellen- und Spawnstruktur
 
 ## Wellen-Spawning
 In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl sowohl als auch die Liste potentieller Spawnpunkte gespeichert und bearbeitet. Ebenfalls werden die UI-Elemente wie der Countdown zur nächsten Welle prozessiert.
+
+Die Game Mode Blueprint kann bei jedem Level individuell ausgewählt und ausgeführt werden.
+
+![VariableExample](.images/UnrealEngineVariableStore.PNG)
+
+In diesem Bild sind die verschiedenen Variablen der Game Mode Blueprint dargestellt.
 
 ### Zufällige Spawnpunkte
 Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die Daten die die eigene Lage auf der Karte beschreiben in einen Array namens "SpawnList" welcher im Blueprint des Spielmodus gespeichert ist. Von diesem Array wird zufällig ein Eintrag ausgewählt jedes mal wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Folglich erhalten wir in Jedem Spawnzyklus zufällig gespawnte Zombies auf viele festen möglichen Spawnpunkten.
@@ -124,6 +129,7 @@ Jeder Actor mit dem Tag "ZombieSpawnPoint" liefert bei dem start des Spiels die 
 
 ## Funktionen
 Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht.
+
 
 ## Schaden nehmen
 Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
