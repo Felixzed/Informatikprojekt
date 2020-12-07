@@ -1216,3 +1216,7 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-21.02.24:474][715]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
 [2020.12.07-21.02.24:515][715]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto478A7236D40DF481E1E1071B27E5765FF.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto4.uasset'
 [2020.12.07-21.02.24:517][715]LogFileHelpers: Auto-saving content packages took 0.043
+[2020.12.07-21.05.56:834][706]LogSlate: Window 'Damage Script' being destroyed
+[2020.12.07-21.14.33:181][438]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie97A9079A492C12132EFC1CAAC5196126.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-21.14.33:197][438]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-21.14.33:197][438]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie

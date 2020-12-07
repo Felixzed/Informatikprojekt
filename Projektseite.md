@@ -155,14 +155,16 @@ MaxHealth ist konstant die Zahl 100, sie definiert die Maximalanzahl an HP die e
 
 Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
-ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 ist dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "Ragdolling"-Prozess.
+ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 ist dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "ZombieDeath"-Prozess.
 
 ### Ragdolling
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem Tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
 Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden, sobald ihr übergeordneter actor unter 100 Health fällt, mit dem Tag "PhysicsEnabled" versehen. Die Physiksimulation wird dann für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert, beide werden dann 5 Sekunden später gelöscht wird um speicher zu sparen.
 
+![ZombieDamageRecieveImage](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
+
 ## Zombie KI
-Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, OnTick bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität und Animation verwendet.
+Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, Mit einem Event welches bei jedem Tick ausgelöst wird bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität und Animation verwendet.
 
 ## Zombie-Nahkampfangriffe
 Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Wenn er dies nicht getan hat wird Schaden ausgeteilt. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Angriffsradius befand.
