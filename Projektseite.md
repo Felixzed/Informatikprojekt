@@ -3,9 +3,9 @@
 
 # Einführung:
 
-Hallo! Hier finden sie meine erklärung der Funktionsweisen meines Spiels, zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt, dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
+Hallo! Hier finden Sie meine Erklärung der Funktionsweisen meines Spiels. Zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt. Dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
 
-Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, welches bei selbst den besten sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden sie am untersten Ende dieses Textes.
+Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, welches bei selbst den besten sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden Sie am untersten Ende dieses Textes.
 
 ## Glossar:
 
