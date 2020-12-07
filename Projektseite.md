@@ -37,7 +37,7 @@ Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen,
 
 ### Schießen
 
-Wenn der Spieler die linke Maustaste drückt, checkt das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
+Wenn der Spieler die linke Maustaste drückt, prüft das Script ob die Munition größer als 0 ist oder ob die Boolean "IsReloading" falsch ist. Wenn eines der beiden nicht der Fall ist passiert nichts, wenn allerdings beides der Fall ist wird ein Granaten-Actor mit einer festen Geschwindigkeit in die Richtung in die die Kamera zeigt geschossen.
 
 
 ![ShootingCheckImage](.images/UnrealEngineShootingCheck.PNG)
@@ -126,9 +126,14 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 
 ## Wellen-Spawning
 
-Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wird dann in die Variable "ZombiesLeftToSpawn" gesetzt.
+Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wert wird dann als Endwert in einen ForLoop geführt.
 
 ![WaveSpawnerImg1](.images/UnrealEngineSpawnPhaseCalc.PNG)
+
+
+![WaveSpawnerImg2](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
+
+Der ForLoop führt den Loop Body von 1 bis ZombiesThisWave aus, hierbei wird ein zufälliger Eintrag der Spawnpunktliste ausgewählt und mit diesem Wert ein Zombie gespawnt. 
 
 # Zombies, Schaden und KI.
 

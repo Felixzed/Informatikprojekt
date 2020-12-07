@@ -1195,3 +1195,10 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-20.09.33:951][326]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode64CD30BE4752DF1C4F556598CB2F2EB6.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
 [2020.12.07-20.09.33:964][326]AssetCheck: New page: Asset Save: FPPWaveMode
 [2020.12.07-20.09.33:964][326]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-20.17.46:558][943]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-20.17.49:830][226]LogSlate: Window 'Do Zombie Wave' being destroyed
+[2020.12.07-20.17.51:485][385]LogSlate: Window 'Do Zombie Wave' being destroyed
+[2020.12.07-20.17.54:161][654]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-20.17.55:182][770]LogSlate: Window 'Grenade' being destroyed
+[2020.12.07-20.17.55:209][770]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2020.12.07-20.17.55:210][770]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
