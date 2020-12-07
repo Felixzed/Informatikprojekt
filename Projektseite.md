@@ -126,7 +126,7 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 
 ## Wellen-Spawning
 
-Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator
+Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wird dann in die Variable "ZombiesLeftToSpawn" gesetzt.
 
 ![WaveSpawnerImg1](.images/UnrealEngineSpawnPhaseCalc.PNG)
 
