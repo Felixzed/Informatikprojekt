@@ -79,12 +79,12 @@ Nun folgt diese Sequenz mit mit einem ForLoop:
 
 ![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
 
-Zuerst wird der AddRadialImpulse zwecks ForLoop ein Array von allen Actors auf der Map die den Tag "PhysicsEnabled" besitzen gegeben.
+Zuerst wird AddRadialImpulse durch den ForLoop ein Array von allen Actors auf dem Level die den Tag "PhysicsEnabled" besitzen, gegeben.
 ForLoop gibt von einem Array für jeden Eintrag einmal die präzisen Daten aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
-AddRadialImpulse folgt bei dem ForLoop allerdings dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
+AddRadialImpulse folgt bei dem ForLoop dem ablauf von "Loop Body", der für jeden eintrag in einem Array abgefeuert wird. Der weitere Scriptverlauf folgt "Completed". "Completed" schickt ein Signal, sobald alle Einträge in dem Array verarbeitet wurden. 
 
 ForLoop führt dann AddRadialImpulse
 
@@ -133,25 +133,29 @@ Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmulti
 
 ![WaveSpawnerImg2](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
 
-Der ForLoop führt den Loop Body von 1 bis ZombiesThisWave aus, hierbei wird ein zufälliger Eintrag der Spawnpunktliste ausgewählt und damit ein Zombie gespawnt. 
+Der ForLoop führt den Loop Body von 1 bis zum Wert von ZombiesThisWave aus, hierbei wird ein zufälliger Eintrag der Spawnpunktliste ausgewählt und damit ein Zombie mit KI gespawnt. 
 
 # Zombies, Schaden und KI.
 
 ## Zombies
 
 ## Funktionen
+
 Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht.
+
 
 ## Schaden nehmen
 Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
 
-Diese ganze Funktion ist in eine Unterfunktion gefasst namens "ZombieDamageHandler"
-Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
-MaxHealth ist konstant die Zahl 100, diese Konstante definiert die Maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
+![ZombieDamageRecieveImage](.images/UnrealEngineZombieDamageScript.PNG)
+
+Diese Funktion ist in eine Unterfunktion namens "ZombieDamageHandler" gefasst.
+Jeder Zombie hat für dieses System zwei wichtige Variablen. "MaxHealth" und "CurrentHealth".
+MaxHealth ist konstant die Zahl 100, sie definiert die Maximalanzahl an HP die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
 
 Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
-ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "Ragdolling" Prozess.
+ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 ist dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "Ragdolling"-Prozess.
 
 ### Ragdolling
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem Tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)

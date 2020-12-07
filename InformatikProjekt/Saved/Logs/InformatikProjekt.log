@@ -1202,3 +1202,17 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-20.17.55:182][770]LogSlate: Window 'Grenade' being destroyed
 [2020.12.07-20.17.55:209][770]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
 [2020.12.07-20.17.55:210][770]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.07-20.58.53:188][948]LogSlate: Window 'Do Zombie Wave' being destroyed
+[2020.12.07-20.58.54:163][ 54]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveModeACDC1ED44943ACDC01579BB52FE4E09A.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
+[2020.12.07-20.58.54:178][ 54]AssetCheck: New page: Asset Save: FPPWaveMode
+[2020.12.07-20.58.54:178][ 54]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-20.59.03:232][123]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-20.59.46:066][926]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie6F094F1F4B8C12EC727CCA8C45493BE1.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-20.59.46:085][926]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-20.59.46:085][926]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-21.02.24:471][715]LogUObjectHash: Compacting FUObjectHashTables data took   3.74ms
+[2020.12.07-21.02.24:474][715]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.036
+[2020.12.07-21.02.24:474][715]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie] ([1] browsable assets)...
+[2020.12.07-21.02.24:474][715]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
+[2020.12.07-21.02.24:515][715]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto478A7236D40DF481E1E1071B27E5765FF.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto4.uasset'
+[2020.12.07-21.02.24:517][715]LogFileHelpers: Auto-saving content packages took 0.043
