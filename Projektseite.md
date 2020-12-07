@@ -161,7 +161,7 @@ ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob Cu
 Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem Tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
 Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden, sobald ihr übergeordneter actor unter 100 Health fällt, mit dem Tag "PhysicsEnabled" versehen. Die Physiksimulation wird dann für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert, beide werden dann 5 Sekunden später gelöscht wird um speicher zu sparen.
 
-![ZombieDamageRecieveImage](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
+![ZombieDamageRecieveImage](.images/UnrealEngineRagdollingProcess.PNG)
 
 ## Zombie KI
 Zombies haben kein komplexeres Verhalten als Bewegen und Angreifen, Mit einem Event welches bei jedem Tick ausgelöst wird bekommt jeder Zombie den Befehl sich zu der Spielerposition zu bewegen, es wird ein Radius definiert in dem dieser Bewegungsbefehl erfolgreich ausgeführt wurde, also Sobald das Zielobjekt, in diesem Fall der Spieler, sich in einem Radius um den Zombie befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Zombie das Zielobjekt nicht in diesem Radius findet wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird zum steuern der Angriffsfunktionalität und Animation verwendet.
