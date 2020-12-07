@@ -66,7 +66,8 @@ Kollision wird zuerst abgeschaltet, damit keine weiteren HitEvents generiert wer
 
 ![DoRadialDamageImage](.images/UnrealEngineApplyRadialDamageWithFalloff.PNG)
 
-Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen"
+Diese Funktion erlaubt es, in einem Radius um einen Aufschlagspunkt dinge zu "beschädigen".
+
 UnrealEngine kommt mit einem bereits integrierten Schaden-Framework, es muss nur definiert werden, dass ein Actor auch beschädigt werden kann. 
 
 Hierbei sind für uns Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller wichtig.
