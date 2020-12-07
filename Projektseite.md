@@ -3,9 +3,9 @@
 
 # Einführung:
 
-Hallo! Hier finden Sie meine Erklärung der Funktionsweisen meines Spiels. Zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt. Dieses habe ich viel bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
+Hallo! Hier finden Sie meine Erklärung der Funktionsweisen meines Spiels. Zum Anfangen habe ich ein Preset von Unreal Engine verwendet namens "FPPpreset" welches Bewegungsfunktionalität und First-Person frameworks bereitstellt. Dieses habe ich stark bearbeitet und habe auch vieles neue hinzugefügt um meinen Spiel-Prototyp zu erstellen.
 
-Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, welches bei selbst den besten sehr zeitaufwändig ist. Deswegen habe ich aus dem Internet heruntergeladene Assets verwendet, eine Liste von diesen und die dazugehörigen links finden Sie am untersten Ende dieses Textes.
+Gescriptet ist alles in "Blueprint", eine visuelle Programmiersprache die mit sog. "Pins" arbeitet um Informationsübertragung darzustellen. Ich habe wenig Erfahrung in 3D-Modellierung, deswegen habe ich Ressourcen aus dem Internet bezogen. Eine Liste von diesen und die dazugehörigen links finden Sie am untersten Ende dieses Textes.
 
 ## Glossar:
 
@@ -107,7 +107,7 @@ Alle Actors, die von den Physikaktionen der Granaten betroffen werden sollen, si
 
 # Wellen- und Spawnstruktur
 
-## Wellen-Spawning
+## Game Mode Blueprint
 In der Sog. "Game Mode Blueprint" wird die Wellenzahl und die Zombieanzahl sowohl als auch die Liste potentieller Spawnpunkte gespeichert und bearbeitet. Ebenfalls werden die UI-Elemente wie der Countdown zur nächsten Welle prozessiert.
 
 Die Game Mode Blueprint kann bei jedem Level individuell ausgewählt und ausgeführt werden.
@@ -124,6 +124,12 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 
 ![VariableExample](.images/UnrealEngineBuildSpawnPointList.PNG)
 
+## Wellen-Spawning
+
+Wellen
+
+![WaveSpawnerImg1](.images/SpawnPhaseCalc.PNG)
+
 # Zombies, Schaden und KI.
 
 ## Zombies
@@ -131,21 +137,19 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt, also jedes mal wenn das Spi
 ## Funktionen
 Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht.
 
-
-
 ## Schaden nehmen
 Zombies erleiden Umgebungsschaden wenn eine Granate des Spielers in der nähe explodiert.
 
 Diese ganze Funktion ist in eine Unterfunktion gefasst namens "ZombieDamageHandler"
 Jeder Zombie hat für dieses System zwei wichtige Variablen. Einmal "MaxHealth" und "CurrentHealth".
-MaxHealth ist konstant die Zahl 100, diese Konstante definiert die maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
+MaxHealth ist konstant die Zahl 100, diese Konstante definiert die Maximalanzahl an HP, die ein Zombie besitzen kann. CurrentHealth dagegen speichert, wie viel HP der Zombie im Moment hat.
 
 Da der Spieler in dem Spiel nur Radial Damage austeilen kann, beginnt die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage.
 CurrentHealth wird abgefragt und wird von dem erlittenen Schaden subtrahiert, danach wird der wert für CurrentHealth aktualisiert. Darauffolgend wird 
 ein Boolean anhängig von dem wert von CurrentHealth generiert, je nachdem ob CurrentHealth kleiner/gleich 0 ist. Wenn CurrentHealth größer 0 dann geschieht nach dem Schaden nehmen nichts, wenn CurrentHealth größer/gleich 0 ist, dann geschieht der "Ragdolling" Prozess.
 
 ### Ragdolling
-Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
+Ragdolling ist ein feature, welches die Meshes unserer Zombies nach ihrem Tod ähnlich wie eine Stoffpuppe mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
 Dies geschieht ähnlich wie bei normalen PhysicsActors. Die Zombie meshes werden, sobald ihr übergeordneter actor unter 100 Health fällt, mit dem Tag "PhysicsEnabled" versehen. Die Physiksimulation wird dann für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert, beide werden dann 5 Sekunden später gelöscht wird um speicher zu sparen.
 
 ## Zombie KI

@@ -1181,3 +1181,9 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 6: SideLeft
 [2020.12.07-19.17.23:784][211]LogAudioMixer: Display: 7: SideRight
 [2020.12.07-19.35.42:014][623]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-19.46.29:909][134]LogUObjectHash: Compacting FUObjectHashTables data took   3.75ms
+[2020.12.07-19.46.29:911][134]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.039
+[2020.12.07-19.46.29:911][134]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Informatikprojekt/FPPWaveMode] ([1] browsable assets)...
+[2020.12.07-19.46.29:911][134]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/FPPWaveMode]
+[2020.12.07-19.46.29:968][134]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode_Auto3D459FAB2400D85936A258E82C373BE53.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/FPPWaveMode_Auto3.uasset'
+[2020.12.07-19.46.29:970][134]LogFileHelpers: Auto-saving content packages took 0.060
