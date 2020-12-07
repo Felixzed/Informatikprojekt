@@ -1187,3 +1187,11 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-19.46.29:911][134]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/FPPWaveMode]
 [2020.12.07-19.46.29:968][134]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode_Auto3D459FAB2400D85936A258E82C373BE53.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/FPPWaveMode_Auto3.uasset'
 [2020.12.07-19.46.29:970][134]LogFileHelpers: Auto-saving content packages took 0.060
+[2020.12.07-20.08.33:219][754]BlueprintLog: New page: Compile FPPWaveMode
+[2020.12.07-20.08.33:294][754]LogUObjectHash: Compacting FUObjectHashTables data took   3.48ms
+[2020.12.07-20.08.33:761][792]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveModeC9CDC2B7450777FC79FA708ADFDCDCD9.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
+[2020.12.07-20.08.33:777][792]AssetCheck: New page: Asset Save: FPPWaveMode
+[2020.12.07-20.08.33:777][792]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-20.09.33:951][326]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode64CD30BE4752DF1C4F556598CB2F2EB6.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
+[2020.12.07-20.09.33:964][326]AssetCheck: New page: Asset Save: FPPWaveMode
+[2020.12.07-20.09.33:964][326]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
