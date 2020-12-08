@@ -147,7 +147,7 @@ Der ForLoop führt den Loop Body von 1 bis zum Wert von ZombiesThisWave aus, hie
 
 ## Funktionen
 
-Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht.
+Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht. Zombies machen an zufälligen Zeitpunkten verschiedene Geräusche.
 
 
 ## Schaden nehmen
@@ -190,11 +190,16 @@ Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen 
 
 ![ZombieAmmoCrateDrop](.images/UnrealEngineDropAmmoCrate.PNG)
 
- Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird die Reservemunition des Spielers aufgefüllt und die Kiste aus dem Spiel Entfernt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst.
+Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird die Reservemunition des Spielers aufgefüllt und die Kiste aus dem Spiel Entfernt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst.
 
- ![AmmoCratePickup](.images/UnrealEngineCratePickup.PNG)
+![AmmoCratePickup](.images/UnrealEngineCratePickup.PNG)
  
- 
+## Zufällige Geräusche
+
+Es wird pro Tick ein zufälliger Timer zwischen 1 und 20 Sekunden gestellt, danach wird geprüft ob der Zombie tot ist, wenn dies nicht der Fall ist wird zufällig zwischen drei Geräuschen entschieden, die an der Position des Zombies abgespielt werden.
+
+![ZombieRandomSounds](.images/UnrealEngineRandomZombieSounds.PNG)
+
 # Animationen u. Effekte
 
 ## Animation von Spieler, Zombies
@@ -215,3 +220,20 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 
 ![ZombieWalkBlend](.images/UnrealEngineWalkStandBlend.PNG)
 
+
+
+
+
+
+
+
+Verwendete Inhalte:
+
+Ammo Box von Danbanana
+MCTF2 Grenade Launcher von welormit (Texturen von Mir)
+LowPoly Animated Zombie von Quaternius
+Ultimate Nature Pack von Quaternius
+Farm Buildings Pack von Quaternius
+OpenFortress - I sawed the Demons von Magnus
+Doom - Weapon Pickup Sound von Id Software
+Terraria Zombie Sounds von Re-Logic
