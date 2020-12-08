@@ -229,13 +229,7 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 ![ZombieWalkBlend](.images/UnrealEngineWalkStandBlend.PNG)
 
 
-
-
-
-
-
-
-Verwendete Inhalte:
+### Verwendete Inhalte:
 
 Ammo Box von Danbanana
 
