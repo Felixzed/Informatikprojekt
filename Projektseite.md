@@ -230,10 +230,17 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 Verwendete Inhalte:
 
 Ammo Box von Danbanana
+
 MCTF2 Grenade Launcher von welormit (Texturen von Mir)
+
 LowPoly Animated Zombie von Quaternius
+
 Ultimate Nature Pack von Quaternius
+
 Farm Buildings Pack von Quaternius
+
 OpenFortress - I sawed the Demons von Magnus
+
 Doom - Weapon Pickup Sound von Id Software
+
 Terraria Zombie Sounds von Re-Logic
