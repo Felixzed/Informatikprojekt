@@ -166,10 +166,18 @@ Abhängig von dem neuen Wert für CurrentHealth wird ein Boolean erzugeugt. Dies
 Ragdolling ist ein Feature, welches die Meshes der Zombies mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
 Diese Funktion ist den verwendeten PhysicsActors ähnlich. Die Zombie Meshes erhalten, sobald ihr übergeordneter actor unter 100 Health fällt, den Tag "PhysicsEnabled". Die Physiksimulation wird für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert. Diese werden 5 Sekunden später gelöscht, somit werden die Meshes aus dem Level entfernt.
 
-![ZombieDamageRecieveImage](.images/UnrealEngineRagdollingProcess.PNG)
+![RagdollExample](.images/UnrealEngineRagdollingProcess.PNG)
 
 ## Zombie KI
-Zombies besitzen als Verhaltensmuster die Aktionen Bewegen und Angreifen. OnTick bekommt jeder Zombie den Befehl, sich zu der Spielerposition zu bewegen. Um den Zombie wird ein Radius berechnet, in dem dieser sich bewegen kann. Wenn der Spieler sich in diesem Radius befindet wird ein Agriff ausgeführt. Hierfür wird ein "OnSuccess"-Pin ausgeführt. Wenn der Spieler nicht in diesem Radius steht wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird für die die Angriffsfunktionalität und Animation genutzt.
+Zombies besitzen als Verhaltensmuster die Aktionen Bewegen und Angreifen. 
+
+OnTick erhält jeder Zombie den Befehl, sich zu der Spielerposition zu bewegen. 
+
+![ZombieMovoTo](.images/UnrealEngineAIMoveTo.PNG)
+
+Um den Zombie wird abhängig von "AcceptanceRadius" ein Radius berechnet. Wenn der Spieler sich in diesem Radius befindet wird ein "OnSuccess"-Pin ausgeführt. Wenn der Spieler nicht in diesem Radius steht wird ein "OnFailure"-Pin ausgeführt. OnSuccess und OnFailure setzen hierbei eine Boolean-Variable "IsAttacking" auf wahr oder falsch. IsAttacking wird für die Angriffsanimation genutzt.
+
+![ZombieIsAttackingSwitch](.images/UnrealEngineAIAnimControls.PNG)
 
 ## Zombie-Nahkampfangriffe
 Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Wenn er dies nicht getan hat wird Schaden ausgeteilt. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Angriffsradius befand.

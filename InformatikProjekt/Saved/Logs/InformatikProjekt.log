@@ -1226,3 +1226,58 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.07-21.35.35:283][885]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_ZombieE1A5C0924F7AC21E804359B47B83C6E8.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
 [2020.12.07-21.35.35:299][885]AssetCheck: New page: Asset Save: NPC_Zombie
 [2020.12.07-21.35.35:299][885]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-22.50.29:242][548]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-22.50.31:242][780]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.07-22.50.32:696][944]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_ZombieDB0AE2264565B9BF53508EA3B7F81B4E.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-22.50.32:713][944]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-22.50.32:713][944]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-22.51.33:744][829]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie3F5507904F316734C894A7806131091C.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-22.51.33:757][829]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-22.51.33:757][829]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-22.52.54:325][968]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie1D1C08FE4DD1CC73E3EFC2970AC10282.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-22.52.54:337][968]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-22.52.54:337][968]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-22.52.55:892][145]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPWaveMode87FB53AD4D1A4A71D14047AD528AB826.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/FPPWaveMode.uasset'
+[2020.12.07-22.52.55:904][145]AssetCheck: New page: Asset Save: FPPWaveMode
+[2020.12.07-22.52.55:904][145]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/FPPWaveMode.FPPWaveMode
+[2020.12.07-22.53.04:306][ 55]LogSlate: Window 'Find Results' being destroyed
+[2020.12.07-22.53.04:311][ 55]LogSlate: Window 'Find Results' being destroyed
+[2020.12.07-22.56.28:490][472]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacter24BCEC554A3626977F3CA0AB8416436E.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-22.56.28:504][472]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-22.56.28:504][472]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-22.57.40:033][971]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacter2262EE5E43B829A30641F4B1E5F3B8C9.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.07-22.57.40:045][971]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.07-22.57.40:045][971]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.07-23.46.40:489][806]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie9AE23C27435DBA6B26C973B9FC9D91A6.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-23.46.40:506][806]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-23.46.40:506][806]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-23.46.49:423][861]BlueprintLog: New page: Compile NPC_Zombie
+[2020.12.07-23.46.49:515][861]LogUObjectHash: Compacting FUObjectHashTables data took   2.95ms
+[2020.12.07-23.46.49:914][891]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie8DCCECFE439418EB738A12B4EC4DBAF9.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-23.46.49:929][891]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-23.46.49:929][891]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.07-23.48.27:737][216]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie535DF318451F660C7165CA8EC43BE38F.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.07-23.48.27:751][216]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.07-23.48.27:751][216]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.08-00.06.20:828][670]LogUObjectHash: Compacting FUObjectHashTables data took   3.68ms
+[2020.12.08-00.06.20:830][670]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.035
+[2020.12.08-00.06.20:831][670]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie] ([1] browsable assets)...
+[2020.12.08-00.06.20:841][670]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie]
+[2020.12.08-00.06.20:841][670]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
+[2020.12.08-00.06.20:896][670]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto5CD2D80604FE8EB1C99251FA7EE6725C2.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto5.uasset'
+[2020.12.08-00.06.20:897][670]LogFileHelpers: Auto-saving content packages took 0.067
+[2020.12.08-00.13.29:873][950]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{a1dcf82c-1ae2-4b4f-8ed0-dfe4a8a622ba}.
+[2020.12.08-00.13.29:873][950]LogTemp: Resetting audio stream to device id 
+[2020.12.08-00.13.29:890][950]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.08-00.13.29:890][950]LogAudioMixer: Display: 1: FrontRight
+[2020.12.08-00.23.21:374][ 17]BlueprintLog: New page: Compile NPC_Zombie
+[2020.12.08-00.23.21:440][ 17]LogUObjectHash: Compacting FUObjectHashTables data took   2.92ms
+[2020.12.08-00.23.21:937][ 51]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie36A93F5940A659D3ED4962B9B14CBEF4.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.08-00.23.21:951][ 51]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.08-00.23.21:952][ 51]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.08-00.24.47:606][ 84]LogUObjectHash: Compacting FUObjectHashTables data took   3.57ms
+[2020.12.08-00.24.47:608][ 84]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.032
+[2020.12.08-00.24.47:608][ 84]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie] ([1] browsable assets)...
+[2020.12.08-00.24.47:608][ 84]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
+[2020.12.08-00.24.47:650][ 84]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto637DE4F3E45CD895267F1CCB367FA7BA3.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto6.uasset'
+[2020.12.08-00.24.47:651][ 84]LogFileHelpers: Auto-saving content packages took 0.044
