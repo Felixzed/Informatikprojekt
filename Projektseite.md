@@ -24,7 +24,7 @@ Level: Ein Drei- order Zweidimensionaler Raum in dem sich verschiedene Actor bef
 
 Execution-Pins sind eine Visuelle Darstellung vom Scriptverlauf. Jede Funktion, z.B. "Launch Character", in Unreal Engine hat einen Execution-Pin Ein- und Ausgang. Blueprint-Scripte starten immer mit einem festen Start-Block, der verschiedene Events im Spielverlauf darstellt (OnHit, OnReceiveDamage). Diese Start-Blöcke haben nur einen Execution-Output, mit welchem normalerweise das Script eines Actors ausgelöst wird. Es ist möglich, eigene Events zu definierten. Im Rahmen dieses Projekts wurden neue Events erstellt.
 
-Zusätzlich zu den beschriebenen Bluepriunts existiert eine Sonderform, sogenannte "Construction Scripts". Bei diesen gibt es einen Start-Block, der sich "OnConstruction" nennt. Construction scripts werden ausgeführt, sobald ein Objekt in einem level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst). Diese sind nützlich, um z.B. Actor anzugeben, die nach einer gewissen Zeit entfernt werden sollen.
+Zusätzlich zu den beschriebenen Bluepriunts existiert eine Sonderform, sogenannte "Construction Scripts". Bei diesen gibt es einen Start-Block, der sich "OnConstruction" nennt. Construction scripts werden ausgeführt, sobald ein Objekt in einem Level gespawnt wird (Construction - Aufbau, das Script wird sozusagen bei dem "Aufbau" eines Actors ausgelöst). Diese sind nützlich, um z.B. Actor anzugeben, die nach einer gewissen Zeit entfernt werden sollen.
 
 Häufig werden für die Übersichtlichkeit Teile des Scripts in "Functions" aufgeteilt. "Functions" (Von hier an "Funktionen" genannt) generieren bei der Ausführung Events. Wenn eine Funktion mit den Namen "ShootProjectile" ausgeführt wird, gibt es dazu ein event, welches "Event ShootProjectile" heißt.
 
@@ -41,14 +41,14 @@ Alle Events die mit Event Dispatchern zusammenhängen befinden sich in dem "Even
 
 ## Funktion
 
-Der Spieler startet in einem Hauptmenü, dort kann er twischen den Optionen "Spielen", "Info", "Optionen" und "Spiel Schließen". 
+Der Spieler startet in einem Hauptmenü, dort kann er zwischen den Optionen "Spielen", "Info", "Optionen" und "Spiel Schließen". 
 Bei dem betätigen der "Spielen"-Schaltfläche wird der Spieler in das Hauptlevel transportiert, bei dem betätigen von "Optionen" kann der Spieler in einem neuen Menü die Spielschwierigkeit einstellen.
 "Info" öffnet ein Menü welches wichtige Informationen um das Spiel darstellt. 
 Bei "Spiel Schließen" wird das Spiel beendet.
 
 ## Widgets
 
-Widgets sind textboxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
+Widgets sind TextBoxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
 
 Menüs, Munitionsanzeigen und Bildschirmeffekte werden alle über Widgets dargestellt. Widgets können "Animiert" werden z.B. mit fade-in und fade-out oder Bewegungen. 
 
@@ -69,13 +69,13 @@ Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü 
 # Waffen-/Spielerfunktionalität Erklärt
 
 ## Funktion:
-Der Spieler besitzt, um sich gegen die Zombies zu wehren, einen Granatenwerfer. Dieser kann kann mit der linken Maustaste abgeschossen werden.
-Der Granatwerfer hat eine 6-Schuss Trommel und kann durch die R-Taste nachgeladen werden. Hierfür wird eine Munitionsreserve von max. 12 Granaten zugegriffen. Wenn die Reserve verbraucht wurde kann nicht weiter nachgeladen werden. Während dem Spiel muss Munition gesammelt werden, um den Vorrat aufzufüllen. Alle wichtigen Infos zu Munition (In der Waffe geladen/im Vorrat) werden unten Rechts auf dem Bildschirm angezeigt.
+Der Spieler besitzt, um sich gegen die Zombies zu wehren, einen Granatenwerfer. Dieser kann mit der linken Maustaste abgeschossen werden.
+Der Granatwerfer hat eine 6-Schuss Trommel und kann durch die R-Taste nachgeladen werden. Hierfür wird eine Munitionsreserve von max. 12 Granaten zugegriffen. Wenn die Reserve verbraucht wurde kann nicht weiter nachgeladen werden. Während dem Spiel muss Munition gesammelt werden, um den Vorrat aufzufüllen. Alle wichtigen Infos zu Munition (In der Waffe geladen/im Vorrat) werden unten rechts auf dem Bildschirm angezeigt.
 Wenn ein Spieler eine Munitionskiste berührt wird die Reservemunition vollkommen aufgefüllt.
 
 ### Bewegung:
 
-Die tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen. W/S wurde "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, welche diese Werte in Bewegungen umwandelt. Dieses Prinzip wird analog für die Sichtsteuerung mit der Maus angewandt.
+Die Tasten W/S und D/A wurden jeweils einer sogenannten "Input-Axis" zugewiesen. W/S wurde "MoveForward" zugewiesen und D/A "MoveRight". Dabei steht W bei MoveForward für 1 und S für -1, bei MoveRight D für 1 und A für -1. Diese Werte werden in dem Blueprint des Spielercharakters einer "AddMovementInput"-Funktion zugewiesen, welche diese Werte in Bewegungen umwandelt. Dieses Prinzip wird analog für die Sichtsteuerung mit der Maus angewandt.
 
 ![MoveAxisControls](.images/UnrealEngineMoveControls.PNG)
 
@@ -90,7 +90,7 @@ Um den Schussvektor zu definieren wird auf den Blickvektor ein Offset addiert. S
 
 ![ShootingFunctionImage](.images/UnrealEngineShootingFunction.PNG)
 
-Abspielen vom Schussound und dem Mündungsfeuereffekt.
+Abspielen vom Schuss-Sound und dem Mündungsfeuereffekt.
 
 ![ShootingFlashImage](.images/UnrealEngineSoundAndFlash.PNG)
 
@@ -113,12 +113,12 @@ Die UnrealEngine besitzt in dem bereits implementierten Gameplay-Framework ein S
 
 Hierbei sind die Parameter für Base Damage, Minimum Damage, Origin, Damage Inner Radius, Damage Outer Radius, Damage Falloff, Damage Causer und Instigated by Controller relevant.
 
-Base Damage beschreibt den Grundschaden, der in einem Radius verursacht wird. Minimum Damage definiert den Minimalwert, unter den der Schadenswert nicht fallen kann. Origin ist der Mittelpunkt des Radius und Damage Inner Radius. Dies beschreibt, ab welchem Punkt in einem Radius der maximale Schaden verursacht wird. Da der Origin nicht verschoben wird ein Wert von 0 eingesetzt. Damage Outer Radius beschreibt, ab welchem Punkt Schaden verursacht wird. Damage Falloff ist die Methode, welche zwischen den Werten von Minimum Damage und Base Damage milthilfe der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
+Base Damage beschreibt den Grundschaden, der in einem Radius verursacht wird. Minimum Damage definiert den Minimalwert, unter den der Schadenswert nicht fallen kann. Origin ist der Mittelpunkt des Radius und Damage Inner Radius. Dies beschreibt, ab welchem Punkt in einem Radius der maximale Schaden verursacht wird. Da der Origin nicht verschoben wird ein Wert von 0 eingesetzt. Damage Outer Radius beschreibt, ab welchem Punkt Schaden verursacht wird. Damage Falloff ist die Methode, welche zwischen den Werten von Minimum Damage und Base Damage mithilfe der Distanz zum Aufschlagspunkt und Outer Radius einen Schadenswert für einen Actor berechnet.
 
 Apply Radial Damage benötigt die Information, welcher Actor nicht beschädigt werden soll.
-Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und damage Falloff sind Konstanten. Diese Werte werden im Verlauf der Anwendung nicht verändert. 
+Base Damage, Minimum Damage, Damage Inner Radius, Damage Outer Radius und Damage Falloff sind Konstanten. Diese Werte werden im Verlauf der Anwendung nicht verändert. 
 
-Auf dem Aufschlagspunkt wird eine Explosionseffekt erzeugt und der Actor für die Granate unsichtbar gesetzt.
+Auf dem Aufschlagspunkt wird ein Explosionseffekt erzeugt und der Actor für die Granate unsichtbar gesetzt.
 
 
 Es folgt diese Sequenz in einem ForLoop:
@@ -141,13 +141,13 @@ AddRadialImpulse ermöglicht es, mit dem Granatwerfer PhysicsActor wegzustoßen.
 
 "Target" Beschreibt, welches Objekt den Impuls erfahren soll.
 "Origin" ist der Punkt, von dem der Radius ausgeht.
-Die "Radius" und "Strength" pins sind float-values und beschreiben jeweils die Größe des Radius und Stärke des Impulses. Außerhalb des Radius wirkt der Impuls nicht. "Falloff" beschreibt, ob die Funktion, welche die abfallende Impulsstärke berechnet, exponentiell oder linear mit der Distanz vom Aufschlagspunkt abfällt. "Vel Change" definiert, ob der Impuls die Masse des weggestoßenen Objektes ignoriert.
+Die "Radius" und "Strength" Pins sind float-values und beschreiben jeweils die Größe des Radius und Stärke des Impulses. Außerhalb des Radius wirkt der Impuls nicht. "Falloff" beschreibt, ob die Funktion, welche die abfallende Impulsstärke berechnet, exponentiell oder linear mit der Distanz vom Aufschlagspunkt abfällt. "Vel Change" definiert, ob der Impuls die Masse des weggestoßenen Objektes ignoriert.
 
-Ein Visualisierung der beschriebenen Funktionalität:
+Eine Visualisierung der beschriebenen Funktionalität:
 
 ![AddradialImpulseExplanationImage](.images/AddRadialImpulseExplanation.png)
 
-Alle Actors, die von den Physik-Interaktionen der Granaten manipuliert werden können, sind mit einem "PhysicsEnabled"-Paramter gekennzeichnet. 
+Alle Actors, die von den Physik-Interaktionen der Granaten manipuliert werden können, sind mit einem "PhysicsEnabled"-Parameter gekennzeichnet. 
 
 "Radius" und "Strength" sind als Konstanten definiert.
 
@@ -179,7 +179,7 @@ Dieses Script wird bei "EventBeginPlay" ausgeführt. Das Event wird bei jedem St
 
 ![WaveSpawnerImg1](.images/UnrealEngineSpawnPhaseCalc.PNG)
 
-Die Wellengröße wird berrechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser wert wird dann als Endwert in einen ForLoop geführt.
+Die Wellengröße wird berechnet aus der Wellenzahl und dem Schwierigkeitsmultiplikator, dieser Wert wird dann als Endwert in einen ForLoop geführt.
 
 
 ![WaveSpawnerImg2](.images/UnrealEngineSpawnPhaseRandomSpawnPoint.PNG)
@@ -192,7 +192,7 @@ Der ForLoop führt den Loop Body von 1 bis zum Wert von ZombiesThisWave aus, hie
 
 ## Funktionen
 
-Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrospondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben können sie potentiell Munitionskisten droppen und werden zu ragdolls und später dann gelöscht. Zombies machen an zufälligen Zeitpunkten verschiedene Geräusche.
+Zombies erscheinen je nach Wellenzahl in immer größeren Mengen, sie erscheinen in ihren korrespondierenden Mengen an zufälligen vordefinierten Punkten, sogenannten "ZombieSpawnPoints" und bewegen sich immer zum Spieler, auch wenn sie ihn nicht sehen können. Sobald sie nah genug an dem Spieler sind, werden sie versuchen ihn anzugreifen. Der Spieler kann Zombies mit seinem Granatwerfer bekämpfen, sie sterben nachdem sie 100 Punkte Schaden erlitten haben. Wenn Zombies sterben lassen sie potentiell Munitionskisten fallen und werden zu Ragdolls und später dann gelöscht. Zombies machen an zufälligen Zeitpunkten verschiedene Geräusche.
 
 
 ## Schaden nehmen
@@ -202,15 +202,15 @@ Zombies erleiden Umgebungsschaden, wenn eine Granate des Spielers in der Nähe e
 
 Diese Funktion ist in der Unterfunktion "ZombieDamageHandler" definiert.
 Jeder Zombie besitzt für dieses System zwei Variablen: "MaxHealth" und "CurrentHealth".
-MaxHealth ein konstanter Wert von 100, diese Konstante definiert die maximalen Lebenspunkte eines Zombies. CurrentHealth  speichert die aktuell verbleibenden Lebenspunkte.
+MaxHealth ein konstanter Wert von 100, diese Konstante definiert die maximalen Lebenspunkte eines Zombies. CurrentHealth speichert die aktuell verbleibenden Lebenspunkte.
 
 Der Spieler verursacht Radial Damage. Bei einem Treffer wird die Funktion ZombieDamageHandler mit einem Event On Take Radial Damage aufgerufen.
 CurrentHealth des getroffenen Zombies wird abgerufen. Von diesem Wert wird der erlittenen Schaden subtrahiert, das Ergebnis ist der neue Wert für CurrentHealth.
-Abhängig von dem neuen Wert für CurrentHealth wird ein Boolean erzugeugt. Dieser gibt an, ob der Wert kleiner 1 ist. Wenn weniger als 1 Lebenspunkt verbleibt wird der Zombie entfernt und ein Ragdoll erzeugt.
+Abhängig von dem neuen Wert für CurrentHealth wird ein Boolean erzeugt. Dieser gibt an, ob der Wert kleiner 1 ist. Wenn weniger als 1 Lebenspunkt verbleibt wird der Zombie entfernt und ein Ragdoll erzeugt.
 
 ### Ragdolling
-Ragdolling ist ein Feature, welches die Meshes der Zombies mit simulierter Physik zusammenfallen lässt. (Rag doll = Stoffpuppe)
-Diese Funktion ist den verwendeten PhysicsActors ähnlich. Die Zombie Meshes erhalten, sobald ihr übergeordneter actor unter 100 Health fällt, den Tag "PhysicsEnabled". Die Physiksimulation wird für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert. Diese werden 5 Sekunden später gelöscht, somit werden die Meshes aus dem Level entfernt.
+Ragdolling ist ein Feature, welches die Meshes der Zombies mit simulierter Physik zusammenfallen lässt. (Rag Doll = Stoffpuppe)
+Diese Funktion ist den verwendeten PhysicsActors ähnlich. Die Zombie Meshes erhalten, sobald ihr übergeordneter Actor unter 100 Health fällt, den Tag "PhysicsEnabled". Die Physiksimulation wird für den Mesh aktiviert und die Sichtbarkeit und Kollision der Capsule Component deaktiviert. Diese werden 5 Sekunden später gelöscht, somit werden die Meshes aus dem Level entfernt.
 
 ![RagdollExample](.images/UnrealEngineRagdollingProcess.PNG)
 
@@ -260,7 +260,7 @@ Hier das Beispiel der State Machine des Zombie-Meshes:
 "Standing/Movement" ist die Animation die gespielt wird während der Zombie nicht angreift, "Attacking" ist die Animation die gespielt wird, wenn die Variable "IsAttacking" True ist.
 Der Übergang von Standing/Movement zu Attacking erfordert, dass "IsAttacking" True ist. Der Übergang von Attacking zu Standing/Movement erfordert, dass "IsAttacking" False ist.
 
-Hier ein Einblick in den übergang von Standing/Movement zu Attacking:
+Hier ein Einblick in den Übergang von Standing/Movement zu Attacking:
 
 ![ZombieBlender](.images/IsAttackingTransition.PNG)
 
