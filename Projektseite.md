@@ -26,6 +26,14 @@ Zusätzlich zu den beschriebenen Bluepriunts existiert eine Sonderform, sogenann
 
 Häufig werden für die Übersichtlichkeit Teile des Scripts in "Functions" aufgeteilt. "Functions" (Von hier an "Funktionen" genannt) generieren bei der Ausführung Events. Wenn eine Funktion mit den Namen "ShootProjectile" ausgeführt wird, gibt es dazu ein event, welches "Event ShootProjectile" heißt.
 
+Ebenfalls existieren sogenannte "Event Dispatcher", diese kann man "Callen" und "Binden", wenn ein Event Dispatcher ein "Call" empfängt, sendet er ein Signal an alle an ihn gebundenen Events.
+
+### Notiz zur Architektur:
+
+In größeren Scripts wo mehrere Dinge pro Tick ausgeführt werden müssen, befinden sich "TickGraphs". Ein Tick Graph callt mehrere Event Dispatcher bei Event OnTick.
+
+Alle Events die mit Event Dispatchern zusammenhängen befinden sich in dem "EventGraph" eines Blueprints. 
+
 # Waffen-/Spielerfunktionalität Erklärt
 
 ## Funktion:
