@@ -130,6 +130,11 @@ Hier eine Liste der Variablen, welche in dem Game Mode Blueprint gespeichert wer
 
 ![VariableExample](.images/UnrealEngineVariableStore.PNG)
 
+Ein sogenannter "PlayerController" wird jeder GameMode zugewiesen.
+
+## Player Controller
+
+Der Player Controller definiert wie ein Spieler mit der Spielwelt interagiert, dies wird verwendet um z.B. im Hauptmenü den Mauscursor anzuzeigen und dann im Spiel wieder zu verbergen.
 
 ### Zufällige Spawnpunkte
 Alle Actor, welche den Tag "ZombieSpawnPoint" besitzen, liefern beim Start der Anwendung die aktuelle Position in einen Array "SpawnList". Dies wird im Blueprint des Spielmodus gespeichert. Von diesem Array wird zufällig ein Eintrag ausgewählt, wenn ein Spawnzyklus ausgeführt wird und als Spawnort für den Zombie eingespeist. Somit werden in jedem Spawnzyklus zufällig gespawnte Zombies zu dem Level hinzugefügt.
@@ -233,6 +238,13 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 
 # Menü, UI-Elemente
 
+##Funktionen
+
+Der Spieler startet in einem Hauptmenü, dort kann er twischen den Optionen "Spielen", "Info", "Optionen" und "Spiel Schließen". 
+Bei dem betätigen der "Spielen"-Schaltfläche wird der Spieler in das Hauptlevel transportiert, bei dem betätigen von "Optionen" kann der Spieler in einem neuen Menü die Spielschwierigkeit einstellen.
+"Info" öffnet ein Menü welches wichtige Informationen um das Spiel darstellt. 
+Bei "Spiel Schließen" wird das Spiel beendet.
+
 ## Widgets
 
 Widgets sind textboxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
@@ -250,9 +262,15 @@ Widget im Spielverlauf:
 Widgets können zu dem Sichtfeld eines Spielers hinzugefügt oder entfernt werden. 
 Ein Beispiel für ein hinzugefügtes animiertes Widget ist der Effekt, der bei dem aufsammeln einer Munitionskiste abspielt.
 
-Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü darzustellen.
+Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü darzustellen und ein anderes zu verbergen. 
 
-### Verwendete Inhalte:
+
+
+
+
+
+
+# Verwendete Inhalte:
 
 Ammo Box von Danbanana
 

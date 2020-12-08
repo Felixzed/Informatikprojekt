@@ -1105,3 +1105,90 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.08-15.19.59:654][461]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2020.12.08-15.20.00:856][594]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
 [2020.12.08-15.20.00:856][594]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-15.56.00:611][158]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{88be4bfe-1064-4e8e-bcd5-388075b557a3}.
+[2020.12.08-15.56.00:611][158]LogTemp: Resetting audio stream to device id 
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 1: FrontRight
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 4: BackLeft
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 5: BackRight
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 6: SideLeft
+[2020.12.08-15.56.00:632][158]LogAudioMixer: Display: 7: SideRight
+[2020.12.08-16.00.10:506][651]BlueprintLog: New page: Compile MainMenuMainWidget
+[2020.12.08-16.00.10:603][651]LogUObjectHash: Compacting FUObjectHashTables data took   6.34ms
+[2020.12.08-16.00.10:690][651]LogSlate: Took 0.006259 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2020.12.08-16.00.11:010][671]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/MainMenuMainWidget89B6448E48DAE67E19BC89A02B019CC2.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/HudElements/MainMenu/MainMenuMainWidget.uasset'
+[2020.12.08-16.00.11:025][671]AssetCheck: New page: Asset Save: MainMenuMainWidget
+[2020.12.08-16.00.11:025][671]LogContentValidation: Display: Validating WidgetBlueprint /Game/Informatikprojekt/HudElements/MainMenu/MainMenuMainWidget.MainMenuMainWidget
+[2020.12.08-16.00.59:302][105]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/MainMenuMainWidgetBAE07BB24D880E2636A582B8DC9CE5EC.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/HudElements/MainMenu/MainMenuMainWidget.uasset'
+[2020.12.08-16.00.59:316][105]AssetCheck: New page: Asset Save: MainMenuMainWidget
+[2020.12.08-16.00.59:316][105]LogContentValidation: Display: Validating WidgetBlueprint /Game/Informatikprojekt/HudElements/MainMenu/MainMenuMainWidget.MainMenuMainWidget
+[2020.12.08-16.01.46:331][854]LogTemp: Repeating last play command: Selected Viewport
+[2020.12.08-16.01.46:356][854]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.12.08-16.01.46:357][854]PIE: New page: PIE session: MainMenu (08.12.2020, 18:01:46)
+[2020.12.08-16.01.46:357][854]LogPlayLevel: Creating play world package: /Game/Informatikprojekt/Maps/UEDPIE_0_MainMenu
+[2020.12.08-16.01.46:527][854]LogPlayLevel: PIE: StaticDuplicateObject took: (0.168894s)
+[2020.12.08-16.01.46:527][854]LogAIModule: Creating AISystem for world MainMenu
+[2020.12.08-16.01.46:528][854]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000026FA0C18600), frame # 95854
+[2020.12.08-16.01.46:528][854]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000026F095BC540), frame # 95854
+[2020.12.08-16.01.46:528][854]LogPlayLevel: PIE: World Init took: (0.001302s)
+[2020.12.08-16.01.46:528][854]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Informatikprojekt/Maps/MainMenu.MainMenu to /Game/Informatikprojekt/Maps/UEDPIE_0_MainMenu.MainMenu (0.170365s)
+[2020.12.08-16.01.46:590][854]LogUObjectHash: Compacting FUObjectHashTables data took   5.00ms
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.12.08-16.01.46:596][854]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.12.08-16.01.46:596][854]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.12.08-16.01.46:597][854]LogAudio: Display: Using built-in audio occlusion.
+[2020.12.08-16.01.46:597][854]LogAudioMixer: Display: Initializing audio mixer.
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 1: FrontRight
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 2: FrontCenter
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 3: LowFrequency
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 4: BackLeft
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 5: BackRight
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 6: SideLeft
+[2020.12.08-16.01.46:601][854]LogAudioMixer: Display: 7: SideRight
+[2020.12.08-16.01.46:617][854]LogAudioMixer: Display: Using Audio Device Lautsprecher (Logitech G432 Gaming Headset)
+[2020.12.08-16.01.46:617][854]LogAudioMixer: Display: Initializing Sound Submixes...
+[2020.12.08-16.01.46:617][854]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2020.12.08-16.01.46:617][854]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2020.12.08-16.01.46:618][854]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2020.12.08-16.01.46:627][854]LogInit: FAudioDevice initialized.
+[2020.12.08-16.01.46:636][854]LogLoad: Game class is 'MainMenuMode_C'
+[2020.12.08-16.01.46:652][854]LogWorld: Bringing World /Game/Informatikprojekt/Maps/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2020.12.08-17.01.46
+[2020.12.08-16.01.46:652][854]LogWorld: Bringing up level for play took: 0.016233
+[2020.12.08-16.01.46:652][854]LogOnline: OSS: Creating online subsystem instance for: :Context_31
+[2020.12.08-16.01.46:657][854]PIE: Server logged in
+[2020.12.08-16.01.46:658][854]PIE: Play in editor total start time 0,301 seconds.
+[2020.12.08-16.01.50:115][108]LogNet: Browse: /Game/Informatikprojekt/Maps/Level1
+[2020.12.08-16.01.50:115][108]LogLoad: LoadMap: /Game/Informatikprojekt/Maps/Level1
+[2020.12.08-16.01.50:115][108]LogWorld: BeginTearingDown for /Game/Informatikprojekt/Maps/UEDPIE_0_MainMenu
+[2020.12.08-16.01.50:116][108]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-16.01.50:121][108]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-16.01.50:188][108]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000026F095BC540), frame # 96108
+[2020.12.08-16.01.50:188][108]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000026FA0C18600), frame # 96108
+[2020.12.08-16.01.50:195][108]LogUObjectHash: Compacting FUObjectHashTables data took   3.56ms
+[2020.12.08-16.01.50:519][108]LogAIModule: Creating AISystem for world Level1
+[2020.12.08-16.01.50:519][108]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (0000026FB6471C00), frame # 96108
+[2020.12.08-16.01.50:519][108]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (0000026F30664A40), frame # 96108
+[2020.12.08-16.01.50:519][108]LogLoad: Game class is 'FPPWaveMode_C'
+[2020.12.08-16.01.50:533][108]LogWorld: Bringing World /Game/Informatikprojekt/Maps/UEDPIE_0_Level1.Level1 up for play (max tick rate 0) at 2020.12.08-17.01.50
+[2020.12.08-16.01.50:534][108]LogWorld: Bringing up level for play took: 0.013935
+[2020.12.08-16.01.50:538][108]LogLoad: Took 0.422868 seconds to LoadMap(/Game/Informatikprojekt/Maps/Level1)
+[2020.12.08-16.01.50:538][108]LogBlueprintUserMessages: [FPPWaveMode_C_0] New Wave! Wave No is: 1
+[2020.12.08-16.01.52:028][212]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.12.08-16.01.52:028][212]LogWorld: BeginTearingDown for /Game/Informatikprojekt/Maps/UEDPIE_0_Level1
+[2020.12.08-16.01.52:028][212]LogWorld: UWorld::CleanupWorld for Level1, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-16.01.52:033][212]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-16.01.52:043][212]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.12.08-16.01.52:051][212]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-16.01.52:103][212]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.12.08-16.01.52:117][212]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (0000026F30664A40), frame # 96212
+[2020.12.08-16.01.52:117][212]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (0000026FB6471C00), frame # 96212
+[2020.12.08-16.01.52:127][212]LogUObjectHash: Compacting FUObjectHashTables data took   4.56ms
+[2020.12.08-16.01.52:194][213]LogPlayLevel: Display: Destroying online subsystem :Context_31
