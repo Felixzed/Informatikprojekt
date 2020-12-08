@@ -190,8 +190,6 @@ Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen 
 
 ![ZombieAmmoCrateDrop](.images/UnrealEngineDropAmmoCrate.PNG)
 
-
-
  Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird die Reservemunition des Spielers aufgefüllt und die Kiste aus dem Spiel Entfernt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst.
 
  ![AmmoCratePickup](.images/UnrealEngineCratePickup.PNG)
