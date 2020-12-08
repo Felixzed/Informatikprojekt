@@ -1281,3 +1281,30 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.08-00.24.47:608][ 84]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
 [2020.12.08-00.24.47:650][ 84]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto637DE4F3E45CD895267F1CCB367FA7BA3.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto6.uasset'
 [2020.12.08-00.24.47:651][ 84]LogFileHelpers: Auto-saving content packages took 0.044
+[2020.12.08-00.32.00:369][137]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.00:369][137]LogEditorTransaction: Undo Move Node
+[2020.12.08-00.32.00:802][154]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.00:802][154]LogEditorTransaction: Undo Move Nodes
+[2020.12.08-00.32.01:122][177]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.01:122][177]LogEditorTransaction: Undo Move Node
+[2020.12.08-00.32.01:591][217]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.01:591][217]LogEditorTransaction: Undo Add Node
+[2020.12.08-00.32.02:034][254]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.02:034][254]LogEditorTransaction: Undo Resize Node
+[2020.12.08-00.32.02:487][292]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.02:487][292]LogEditorTransaction: Undo Move Node
+[2020.12.08-00.32.02:929][329]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.02:929][329]LogEditorTransaction: Undo Move Node
+[2020.12.08-00.32.03:347][366]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.03:347][366]LogEditorTransaction: Undo Move Nodes
+[2020.12.08-00.32.04:486][476]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.04:486][476]LogEditorTransaction: Undo Move Nodes
+[2020.12.08-00.32.07:238][761]Cmd: TRANSACTION UNDO
+[2020.12.08-00.32.07:238][761]LogEditorTransaction: Undo Break Pin Links
+[2020.12.08-00.34.48:196][321]LogUObjectHash: Compacting FUObjectHashTables data took   3.52ms
+[2020.12.08-00.34.48:198][321]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Informatikprojekt/Maps/DebugMap' took 0.036
+[2020.12.08-00.34.48:198][321]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie] ([1] browsable assets)...
+[2020.12.08-00.34.48:206][321]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie]
+[2020.12.08-00.34.48:206][321]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
+[2020.12.08-00.34.48:256][321]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto7E7330FB549D02FF7D675AA99736BD03B.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto7.uasset'
+[2020.12.08-00.34.48:257][321]LogFileHelpers: Auto-saving content packages took 0.060

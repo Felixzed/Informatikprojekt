@@ -182,6 +182,9 @@ Um den Zombie wird abhängig von "AcceptanceRadius" ein Radius berechnet. Wenn d
 ## Zombie-Nahkampfangriffe
 Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wird es in eine Verzögerung geleitet. Nach der Verzögerung wird geprüft, ob der Spieler sich mehr als 40 Unreal Engine Distanzeinheiten (1UE = 1cm) von dem Zombie entfernt hat, wenn er dies getan hat wird der Angriff zwecks Branch mit Boolean abgebrochen. Wenn er dies nicht getan hat wird Schaden ausgeteilt. Dies erlaubt dem Spieler von dem Angriff des Zombies wegzulaufen bevor er davon getroffen wird, obwohl er sich vorher schon im Angriffsradius befand.
 
+![ZombieIsAttackingSwitch](.images/UnrealEngineExamplePlayerProximity.PNG)
+
+
 ## Munition droppen
 Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen zu lassen. Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird diese entfernt und die Reservemunition des Spielers aufgefüllt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst. Die Wahrscheinlichkeit, ob eine Munitionskiste fallen gelassen wird, kann durch eine Zufallsfunktion bestimmt werden. Hierfür wird ein float-Wert zwischen 0 und 1 generiert. Wenn der genertierte Wert kleiner dem Wert der Variable "AmmoCrateDropChance" wird eine Munitionskiste erstellt.
 
