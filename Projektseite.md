@@ -214,6 +214,9 @@ Es wird pro Tick ein zufälliger Timer zwischen 1 und 20 Sekunden gestellt, dana
 Sowohl der Spieler als auch die Zombies besitzen ein sogenanntes "Animation-Blueprint". Dies ermöglicht es, jegliche Animationen an einer Mesh darzustellen.
 Hierzu besitzt die Animation Blueprint von dem Zombie eine sogenannte "State Machine". Diese berechnet anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies. Ein solcher Übergang findet z.B. zwischen der Animation für das Laufen und Angreifen statt.
 
+Die "State Machine" gibt letztendlich nur eine Pose an die das Modell darstellt.
+![ZombieOutputPose](.images/UnrealEngineStateMachine.PNG)
+
 Hier das Beispiel der State Machine des Zombie-Modells:
 ![ZombieStateMachine](.images/UnrealEngineAnimationTree.PNG)
 

@@ -922,3 +922,37 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.08-12.32.28:687][245]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/AmmoPickupPhysics67A93D044275596516817983604974E9.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.uasset'
 [2020.12.08-12.32.28:699][245]AssetCheck: New page: Asset Save: AmmoPickupPhysics
 [2020.12.08-12.32.28:700][245]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.AmmoPickupPhysics
+[2020.12.08-12.33.53:918][291]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/FPPCharacterF6BAC3154CE035F673C793B293C155E4.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/FPPCharacter.uasset'
+[2020.12.08-12.33.53:931][291]AssetCheck: New page: Asset Save: FPPCharacter
+[2020.12.08-12.33.53:931][291]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/FPPCharacter.FPPCharacter
+[2020.12.08-12.37.03:473][210]LogRenderer: Reallocating scene render targets to support 1240x564 Format 10 NumSamples 1 (Frame:1).
+[2020.12.08-12.37.08:788][823]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-12.37.08:788][823]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-12.37.11:287][101]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2020.12.08-12.37.11:288][101]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-12.37.11:288][101]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-12.37.11:677][138]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2020.12.08-12.37.11:677][138]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-12.37.11:677][138]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-12.37.12:171][186]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2020.12.08-12.37.12:171][186]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2020.12.08-12.37.12:171][186]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.12.08-12.55.16:582][ 52]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.AmmoPickupPhysics
+[2020.12.08-12.56.17:421][255]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/AmmoPickupPhysicsC25AD74E43C4B0BA7C69B88D79071215.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.uasset'
+[2020.12.08-12.56.17:432][255]AssetCheck: New page: Asset Save: AmmoPickupPhysics
+[2020.12.08-12.56.17:432][255]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.AmmoPickupPhysics
+[2020.12.08-13.21.26:086][552]LogHMD: SteamVR Shutting down.
+[2020.12.08-13.21.28:532][559]LogAudioMixer: Warning: Changing default audio render device to new device: {0.0.0.00000000}.{a1dcf82c-1ae2-4b4f-8ed0-dfe4a8a622ba}.
+[2020.12.08-13.21.28:532][559]LogTemp: Resetting audio stream to device id 
+[2020.12.08-13.21.28:547][559]LogAudioMixer: Display: 0: FrontLeft
+[2020.12.08-13.21.28:547][559]LogAudioMixer: Display: 1: FrontRight
+[2020.12.08-13.54.58:228][ 71]LogAssetEditorSubsystem: Opening Asset editor for SkeletalMesh /Game/Informatikprojekt/ZombieFramework/ZombieAnim/SK_Zombie.SK_Zombie
+[2020.12.08-13.54.58:238][ 71]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2020.12.08-13.54.58:405][ 71]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.12.08-13.54.58:411][ 71]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0003 seconds. Added 1 classes and 0 folders.
+[2020.12.08-13.54.58:493][ 71]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.12.08-13.54.59:052][ 71]LogRenderer: Reallocating scene render targets to support 1240x884 Format 10 NumSamples 1 (Frame:1).
+[2020.12.08-13.55.00:912][231]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/Informatikprojekt/ZombieFramework/ZombieAnim/Zombie_Skeleton_AnimBlueprint.Zombie_Skeleton_AnimBlueprint
+[2020.12.08-13.55.00:919][231]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_19:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.12.08-13.55.01:318][231]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_19:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.12.08-13.55.01:625][231]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
