@@ -129,8 +129,9 @@ Es gab erstaunlicherweise wenig Schwierigkeiten hierbei, ich hatte mir bei dem n
 Mit dem Wellenmodus gab es auch wenig Probleme, ich habe die geplante ausführung Problemlos durchsetzen können.
 
 ## Heimarbeit: 4 Stunden.
-
 Neu: Hauptmenü
+
+Anfangs hatte ich einige schwierigkeiten mit dem erstellen und löschen von Widgets, aber danach lief alles flüssig. 
 
 ## 14te Stunde: 45 min.
 Erfolgreiche Installation des Unreal-Editors auf den Schulcomputern im CR2.
