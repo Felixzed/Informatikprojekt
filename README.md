@@ -18,6 +18,3 @@ Hier finden sie den Projekt-Trello, den ich für Organisation verwende.
 ### - [Design Doc](https://docs.google.com/document/d/1RfED8MwGAkDmg-AF9oWtLQ55LMtbvNNZ1ETjN1LYYiw/edit?usp=sharing)
 
 Hier geht es zum Design Document, welches die Spielideen ausführlicher erklärt.
-
-
-# Projekt soll bis 4. Dezember fertig sein!
