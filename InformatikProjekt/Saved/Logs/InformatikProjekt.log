@@ -1308,3 +1308,22 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.08-00.34.48:206][321]OBJ SavePackage: Finished generating thumbnails for package [/Game/Informatikprojekt/ZombieFramework/NPC_Zombie]
 [2020.12.08-00.34.48:256][321]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_Zombie_Auto7E7330FB549D02FF7D675AA99736BD03B.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/Autosaves/Game/Informatikprojekt/ZombieFramework/NPC_Zombie_Auto7.uasset'
 [2020.12.08-00.34.48:257][321]LogFileHelpers: Auto-saving content packages took 0.060
+[2020.12.08-00.59.25:603][224]BlueprintLog: New page: Compile NPC_Zombie
+[2020.12.08-00.59.25:668][224]LogUObjectHash: Compacting FUObjectHashTables data took   3.22ms
+[2020.12.08-00.59.26:259][267]LogSavePackage: Moving '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Saved/NPC_ZombieD57CD6B84009A9B3ADC2A28FD650F202.tmp' to '../../../../../Users/felix/Documents/GitHub/Informatikprojekt/InformatikProjekt/Content/Informatikprojekt/ZombieFramework/NPC_Zombie.uasset'
+[2020.12.08-00.59.26:276][267]AssetCheck: New page: Asset Save: NPC_Zombie
+[2020.12.08-00.59.26:276][267]LogContentValidation: Display: Validating Blueprint /Game/Informatikprojekt/ZombieFramework/NPC_Zombie.NPC_Zombie
+[2020.12.08-00.59.28:692][475]LogAssetEditorSubsystem: Opening Asset editor for SkeletalMesh /Game/Informatikprojekt/ZombieFramework/ZombieAnim/SK_Zombie.SK_Zombie
+[2020.12.08-00.59.28:712][475]LogContentBrowser: Native class hierarchy updated for 'SkeletonEditor' in 0.0008 seconds. Added 1 classes and 2 folders.
+[2020.12.08-00.59.28:891][475]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.12.08-00.59.28:905][475]LogContentBrowser: Native class hierarchy updated for 'PinnedCommandList' in 0.0016 seconds. Added 1 classes and 0 folders.
+[2020.12.08-00.59.28:987][475]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_17:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.12.08-00.59.29:723][475]LogRenderer: Reallocating scene render targets to support 1236x884 Format 10 NumSamples 1 (Frame:1).
+[2020.12.08-00.59.45:199][358]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Informatikprojekt/ZombieFramework/ZombieAnim/WalkRunIdleBlend.WalkRunIdleBlend
+[2020.12.08-00.59.45:214][358]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_22:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.12.08-00.59.45:249][358]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_22:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.12.08-00.59.45:903][358]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.12.08-00.59.46:156][372]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/Informatikprojekt/ZombieFramework/ZombieAnim/Zombie_Skeleton_AnimBlueprint.Zombie_Skeleton_AnimBlueprint
+[2020.12.08-00.59.46:166][372]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_25:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.12.08-00.59.46:597][372]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_25:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.12.08-00.59.46:900][372]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence

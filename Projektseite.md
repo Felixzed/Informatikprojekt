@@ -86,8 +86,8 @@ Es folgt diese Sequenz in einem ForLoop:
 ![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
 
 Alle Objekte die von Granatenexplosionen weggestoßen werden sollen, werden mit dem Tag "PhysicsEnabled" gekennzeichnet.  
-Im ersten Schritt wird AddRadialImpulse durch den For-Loop ein Array von allen Actors in dem Level welche den Tag besitzen übergeben.
-Die For-Loop gibt von jedem Eintrag in einem Array die Parameter aus. Hiermit definieren wir im Grunde alle Actor die von AddRadialImpulse betroffen sein sollen.
+Im ersten Schritt wird mit "GetAllActorsWithTag" ein Array von Actor-Referenzen erstellt, welchen wir durch einen ForLoop führen.
+Die For-Loop gibt von jedem Eintrag in einem Array die Parameter eines Actors in dem Array aus. Hiermit definieren wir im Grunde alle Actor die von AddRadialImpulse betroffen sein sollen. Mit GetComponentByClass wird der Datentyp "Object Reference" der in dem Array vorhanden ist zu einer "Primitive Component Reference" umgeformt. Dieser Datentyp wird von AddRadialImpulse benötigt.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
@@ -191,7 +191,20 @@ Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen 
 # Animationen u. Effekte
 
 ## Animation von Spieler, Zombies
-Sowohl der Spieler als auch die Zombies besitzen ein sogenanntes "Animation-Blueprint". Dies ermöglicht es, jegliche Animationen (z.B. flüssige Animationsübergäng) darzustellen oder abhängig von einem bestimmten Wert Animationen zu kombienieren (sogenannte "Blends").
+Sowohl der Spieler als auch die Zombies besitzen ein sogenanntes "Animation-Blueprint". Dies ermöglicht es, jegliche Animationen an einer Mesh darzustellen.
 Hierzu besitzt die Animation Blueprint von dem Zombie eine sogenannte "State Machine". Diese berechnet anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies. Ein solcher Übergang findet z.B. zwischen der Animation für das Laufen und Angreifen statt.
 
+Hier das Beispiel der State Machine des Zombie-Modells:
+![ZombieStateMachine](.images/UnrealEngineAnimationTree.PNG)
+
+"Standing/Movement" ist die Animation die gespielt wird während der Zombie nicht angreift, "Attacking" ist die Animation die gespielt wird, wenn die Variable "IsAttacking" True ist.
+Der Übergang von Standing/Movement zu Attacking erfordert, dass "IsAttacking" True ist. Der Übergang von Attacking zu Standing/Movement erfordert, dass "IsAttacking" False ist.
+
+Hier ein Einblick in den übergang von Standing/Movement zu Attacking:
+
+![ZombieBlender](.images/IsAttackingTransition.PNG)
+
+Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der anhand von einem Float von der einen Animation zu der anderen flüssig übergeht.
+
+![ZombieWalkBlend](.images/UnrealEngineWalkStandBlend.PNG)
 
