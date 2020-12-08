@@ -250,7 +250,7 @@ Widget im Spielverlauf:
 Widgets können zu dem Sichtfeld eines Spielers hinzugefügt oder entfernt werden. 
 Ein Beispiel für ein hinzugefügtes animiertes Widget ist der Effekt, der bei dem aufsammeln einer Munitionskiste abspielt.
 
-Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menu darzustellen.
+Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü darzustellen.
 
 ### Verwendete Inhalte:
 
