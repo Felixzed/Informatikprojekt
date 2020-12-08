@@ -17,6 +17,8 @@ Pin: Ein In- und Output für Daten bei dem Programmieren mit Blueprints, z.B. ei
 Mesh: Das 3D-Form eines Actors ohne Textur. Z.B. ein Mensch, ein Stuhl, ein Tisch, eine Flasche oder eine Wand.
 
 Tick: Ein "Tick" ist ein Arbeitsschritt in der Unreal Engine. Das Event "onTick" wird bei jedem Arbeitsschritt ausgeführt.
+
+Level: Ein Drei- order Zweidimensionaler Raum in dem sich verschiedene Actor befinden.
   
 ## Einführung Ausführungsreihenfolge:
 
