@@ -34,6 +34,36 @@ In größeren Scripts wo mehrere Dinge pro Tick ausgeführt werden müssen, befi
 
 Alle Events die mit Event Dispatchern zusammenhängen befinden sich in dem "EventGraph" eines Blueprints. 
 
+
+# Menü, UI-Elemente
+
+## Funktion
+
+Der Spieler startet in einem Hauptmenü, dort kann er twischen den Optionen "Spielen", "Info", "Optionen" und "Spiel Schließen". 
+Bei dem betätigen der "Spielen"-Schaltfläche wird der Spieler in das Hauptlevel transportiert, bei dem betätigen von "Optionen" kann der Spieler in einem neuen Menü die Spielschwierigkeit einstellen.
+"Info" öffnet ein Menü welches wichtige Informationen um das Spiel darstellt. 
+Bei "Spiel Schließen" wird das Spiel beendet.
+
+## Widgets
+
+Widgets sind textboxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
+
+Menüs, Munitionsanzeigen und Bildschirmeffekte werden alle über Widgets dargestellt. Widgets können "Animiert" werden z.B. mit fade-in und fade-out oder Bewegungen. 
+
+Widget vom Hauptmenü:
+
+![MainMenuExample](.images/UnrealEngineWidgets.PNG)
+
+Widget im Spielverlauf:
+
+![InGameUI](.images/UnrealEngineMainInGameWidget.PNG)
+
+Widgets können zu dem Sichtfeld eines Spielers hinzugefügt oder entfernt werden. 
+Ein Beispiel für ein hinzugefügtes animiertes Widget ist der Effekt, der bei dem aufsammeln einer Munitionskiste abspielt.
+
+Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü darzustellen und ein anderes zu verbergen. 
+
+
 # Waffen-/Spielerfunktionalität Erklärt
 
 ## Funktion:
@@ -236,33 +266,6 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 
 ![ZombieWalkBlend](.images/UnrealEngineWalkStandBlend.PNG)
 
-# Menü, UI-Elemente
-
-##Funktionen
-
-Der Spieler startet in einem Hauptmenü, dort kann er twischen den Optionen "Spielen", "Info", "Optionen" und "Spiel Schließen". 
-Bei dem betätigen der "Spielen"-Schaltfläche wird der Spieler in das Hauptlevel transportiert, bei dem betätigen von "Optionen" kann der Spieler in einem neuen Menü die Spielschwierigkeit einstellen.
-"Info" öffnet ein Menü welches wichtige Informationen um das Spiel darstellt. 
-Bei "Spiel Schließen" wird das Spiel beendet.
-
-## Widgets
-
-Widgets sind textboxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
-
-Menüs, Munitionsanzeigen und Bildschirmeffekte werden alle über Widgets dargestellt. Widgets können "Animiert" werden z.B. mit fade-in und fade-out oder Bewegungen. 
-
-Widget vom Hauptmenü:
-
-![MainMenuExample](.images/UnrealEngineWidgets.PNG)
-
-Widget im Spielverlauf:
-
-![InGameUI](.images/UnrealEngineMainInGameWidget.PNG)
-
-Widgets können zu dem Sichtfeld eines Spielers hinzugefügt oder entfernt werden. 
-Ein Beispiel für ein hinzugefügtes animiertes Widget ist der Effekt, der bei dem aufsammeln einer Munitionskiste abspielt.
-
-Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menü darzustellen und ein anderes zu verbergen. 
 
 
 
