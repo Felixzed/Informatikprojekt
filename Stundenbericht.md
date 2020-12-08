@@ -131,7 +131,7 @@ Mit dem Wellenmodus gab es auch wenig Probleme, ich habe die geplante ausführun
 ## Heimarbeit: 4 Stunden.
 Neu: Hauptmenü
 
-Anfangs hatte ich einige schwierigkeiten mit dem erstellen und löschen von Widgets, aber danach lief alles flüssig. 
+Anfangs hatte ich einige schwierigkeiten mit dem erstellen und löschen von Widgets, aber danach lief alles flüssig. Ich habe dann nach und nach die verschiedenen Menü-Optionen entworfen.
 
 ## 14te Stunde: 45 min.
 Erfolgreiche Installation des Unreal-Editors auf den Schulcomputern im CR2.
@@ -151,3 +151,7 @@ Versuch Installation von UE4 auf Lehrercomputer in CR1.
 ## 19te Stunde: 45 min.
 Erfolgreiche Installation von UE4 auf Lehrercomputer, Arbeit an Projektseite u. Stundenbericht.
 
+## Heimarbeit: 2 Stunden.
+Neu: Schwierigkeitseinstellung im Hauptmenü
+
+Schwierigkeiten waren hier der Zugriff auf die Daten des gesetzten Schwierigkeitsmodus die sich in einem anderen Level befanden, gelöst habe ich das dann über die sogenannte "Session-Blueprint" welches eine übergeordnete Blueprint zum speichern von Variablen innerhalb einer "Session", also einer Spielinstanz, ist.
