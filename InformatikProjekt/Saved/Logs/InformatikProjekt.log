@@ -1327,3 +1327,5 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.08-00.59.46:166][372]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_25:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
 [2020.12.08-00.59.46:597][372]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_25:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
 [2020.12.08-00.59.46:900][372]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.12.08-01.23.29:573][314]LogSlate: Window 'Event Graph' being destroyed
+[2020.12.08-01.23.33:850][737]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Informatikprojekt/PlayerAssets/AmmoPickupPhysics.AmmoPickupPhysics

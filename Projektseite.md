@@ -186,8 +186,17 @@ Nach einem Gate welches unser Script nur ausführt wenn IsAttacking wahr ist, wi
 ![ZombieIsAttackingSwitch](.images/UnrealEngineExamplePlayerProximity.PNG)
 
 ## Munition Fallen Lassen
-Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen zu lassen. Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird diese entfernt und die Reservemunition des Spielers aufgefüllt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst. Die Wahrscheinlichkeit, ob eine Munitionskiste fallen gelassen wird, kann durch eine Zufallsfunktion bestimmt werden. Hierfür wird ein float-Wert zwischen 0 und 1 generiert. Wenn der genertierte Wert kleiner dem Wert der Variable "AmmoCrateDropChance" wird eine Munitionskiste erstellt.
+Jeder Zombie besitzt eine fest definierte Chance, eine Munitionskiste zu fallen zu lassen. Die Wahrscheinlichkeit, ob eine Munitionskiste fallen gelassen wird, kann durch eine Zufallsfunktion bestimmt werden. Hierfür wird ein float-Wert zwischen 0 und 1 generiert. Wenn der generierte Wert kleiner dem Wert der Variable "AmmoCrateDropChance" wird eine Munitionskiste erstellt.
 
+![ZombieAmmoCrateDrop](.images/UnrealEngineDropAmmoCrate.PNG)
+
+
+
+ Munitionskisten sind Physikobjekte. Wenn der Spieler in eine Munitionskiste läuft wird die Reservemunition des Spielers aufgefüllt und die Kiste aus dem Spiel Entfernt. Diese Funktion wird durch das OnBeginOverlap-Event ausgelöst.
+
+ ![AmmoCratePickup](.images/UnrealEngineCratePickup.PNG)
+ 
+ 
 # Animationen u. Effekte
 
 ## Animation von Spieler, Zombies
