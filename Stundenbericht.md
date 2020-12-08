@@ -123,3 +123,30 @@ Neu: Neues Waffenmodell
 Neu: Granateneffekte überarbeitet
 
 Neu: Wellenmodus
+
+Es gab erstaunlicherweise wenig Schwierigkeiten hierbei, ich hatte mir bei dem neuen Waffenmodell ein Modell ohne Textur ausgesucht. Ich hatte dann Blender verwendet und gelernt wie man etwas mit texturen verseht, das passierte dann auch relativ schnell. 
+
+Mit dem Wellenmodus gab es auch wenig Probleme, ich habe die geplante ausführung Problemlos durchsetzen können.
+
+## Heimarbeit: 4 Stunden.
+
+Neu: Hauptmenü
+
+## 14te Stunde: 45 min.
+Erfolgreiche Installation des Unreal-Editors auf den Schulcomputern im CR2.
+
+## 15te Stunde: 45 min.
+Demonstration an Herr Buhl, Cleanup mancher Scripts im Projekt.
+
+## 16te Stunde: 45 min.
+Arbeit an dem Projekt in CR2, Kommentierung von Scripts und mehr Cleanup.
+
+## 17te Stunde: 45 min.
+Arbeit an dem Projekt in CR2, Kommentierung von Scripts.
+
+## 18te Stunde: 45 min.
+Versuch Installation von UE4 auf Lehrercomputer in CR1.
+
+## 19te Stunde: 45 min.
+Erfolgreiche Installation von UE4 auf Lehrercomputer, Arbeit an Projektseite u. Stundenbericht.
+
