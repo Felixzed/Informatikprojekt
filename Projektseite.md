@@ -85,8 +85,9 @@ Es folgt diese Sequenz in einem ForLoop:
 
 ![ImpulseSequenceImage](.images/UnrealEngineImpulseFunction.PNG)
 
-Im ersten Schritt wird AddRadialImpulse durch den For-Loop Array von allen Actors in dem Level, welche den Tag "PhysicsEnabled" besitzen, übergeben.
-Die For-Loop gibt von jedem Eintrag in einem Array die Parameter aus. Hiermit definieren wir im Grunde dass mehr als ein Actor von AddRadialImpulse betroffen sein soll, da AddRadialImpulse eine sogenannte "Primitive Object Reference" braucht, sprich die einfach Identifikationsdaten von einem Actor auf einer Karte.
+Alle Objekte die von Granatenexplosionen weggestoßen werden sollen, werden mit dem Tag "PhysicsEnabled" gekennzeichnet.  
+Im ersten Schritt wird AddRadialImpulse durch den For-Loop ein Array von allen Actors in dem Level welche den Tag besitzen übergeben.
+Die For-Loop gibt von jedem Eintrag in einem Array die Parameter aus. Hiermit definieren wir im Grunde alle Actor die von AddRadialImpulse betroffen sein sollen.
 
 ![ForLoopImage](.images/UnrealEngineForLoop.PNG)
 
