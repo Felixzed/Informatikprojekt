@@ -214,10 +214,10 @@ Es wird pro Tick ein zufälliger Timer zwischen 1 und 20 Sekunden gestellt, dana
 Sowohl der Spieler als auch die Zombies besitzen ein sogenanntes "Animation-Blueprint". Dies ermöglicht es, jegliche Animationen an einer Mesh darzustellen.
 Hierzu besitzt die Animation Blueprint von dem Zombie eine sogenannte "State Machine". Diese berechnet anhand von verschiedenen Booleans flüssige Animationsübergänge von verschiedenen "Stadien" in der Animation des Zombies. Ein solcher Übergang findet z.B. zwischen der Animation für das Laufen und Angreifen statt.
 
-Die "State Machine" gibt letztendlich nur eine Pose an die das Modell darstellt.
+Die "State Machine" gibt letztendlich nur eine Pose an die die Mesh darstellt.
 ![ZombieOutputPose](.images/UnrealEngineStateMachine.PNG)
 
-Hier das Beispiel der State Machine des Zombie-Modells:
+Hier das Beispiel der State Machine des Zombie-Meshes:
 ![ZombieStateMachine](.images/UnrealEngineAnimationTree.PNG)
 
 "Standing/Movement" ist die Animation die gespielt wird während der Zombie nicht angreift, "Attacking" ist die Animation die gespielt wird, wenn die Variable "IsAttacking" True ist.
@@ -231,6 +231,26 @@ Standing/Movement ist ein "Animation Blend". Ein Verbund zweier Animationen der 
 
 ![ZombieWalkBlend](.images/UnrealEngineWalkStandBlend.PNG)
 
+# Menü, UI-Elemente
+
+## Widgets
+
+Widgets sind textboxen, Bilder oder Schaltflächen die fixiert auf dem Bildschirm dargestellt werden.
+
+Menüs, Munitionsanzeigen und Bildschirmeffekte werden alle über Widgets dargestellt. Widgets können "Animiert" werden z.B. mit fade-in und fade-out oder Bewegungen. 
+
+Widget vom Hauptmenü:
+
+![MainMenuExample](.images/UnrealEngineWidgets.PNG)
+
+Widget im Spielverlauf:
+
+![InGameUI](.images/UnrealEngineMainInGameWidget.PNG)
+
+Widgets können zu dem Sichtfeld eines Spielers hinzugefügt oder entfernt werden. 
+Ein Beispiel für ein hinzugefügtes animiertes Widget ist der Effekt, der bei dem aufsammeln einer Munitionskiste abspielt.
+
+Widgets können Scripts ausführen um z.B. bei einem Knopfdruck ein neues Menu darzustellen.
 
 ### Verwendete Inhalte:
 
